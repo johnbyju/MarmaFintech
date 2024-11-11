@@ -88,7 +88,7 @@ const cards = [
   },
   {
     id: "004",
-    title: "BITCOINS",
+    title: "BITCOINSTORE",
     description:
       "Your Innovative Exchange Hub Connecting Cash and Cryptocurrency for Easy Bitcoin Transactions.",
     url: "url('/product/bitcoin.png')",
