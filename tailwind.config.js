@@ -16,7 +16,8 @@ export default {
           'headerWhite':'#D9CCCC',
           'headerLaseWhite':'#605E5E',
           'contentWhite':'#DDD8D8',
-          'contentgrey':'#938989'
+          'contentgrey':'#938989',
+          'sub-head-color' :'#BBB7B7',
 
       },
     },

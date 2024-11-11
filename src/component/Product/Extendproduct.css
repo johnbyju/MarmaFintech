@@ -50,7 +50,6 @@
     font-size: 40px;  
     font-weight: 400; 
     text-align: left;  
-    margin-bottom: 10px;
   }
   
   .product-description{
@@ -60,13 +59,23 @@
     margin-bottom: 15px;
   }
   
+  .carsouel{
+    gap: 20px;
+  }
+
+  .product-card-data{
+    display: flex;
+    flex-direction: column;
+    justify-content : flex-end;
+    padding: 10px; 
+    gap: 15px;
+    
+  }
+
   .product-title{  
-      font-family: 'PP Neue Montreal', sans-serif;
-      font-size: 65px;
-      line-height: 78px;
+      font-size: 24px;
       text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
+      letter-spacing: 1px;
   }
   
 
@@ -102,8 +111,8 @@
 
   @media (max-width: 1024px) {
     .card {
-      width: 650px;
-      height: 550px;
+      width: 600px;
+      height: 520px;
     }
     .title-num {
       font-size: 2.5rem;
@@ -165,7 +174,7 @@
    
    .card {
       width: 230px !important ;
-      height: 300px !important;
+      height: 350px !important;
     
     } 
     .title-num {
