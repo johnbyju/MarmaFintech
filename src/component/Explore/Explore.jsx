@@ -4,13 +4,13 @@ import './Explore.css'
 
 
 const EventCard = ({ event }) => (
-  <div className="md:grid-cols-12  flex flex-row min-h-30 sm:flex-row gap-1 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
-    <div className=" pt-2 rounded-lg flex-shrink-0   md:cols-span-4">
+  <div className="md:grid-cols-12 p-5 flex flex-row min-h-30 sm:flex-row gap-1 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
+    <div className=" pt-2 rounded-lg flex-shrink-0   md:cols-span-8">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVuR0yQGpIwG_ZtdUeR-ajniNKxpFbK5lUyw&s" alt={`${event.title}-image`} className='event-image' />
     </div>
-    <div className="flex flex-col justify-center sm:inline-flex pl-3 md:cols-span-5">
+    <div className="flex flex-col justify-center sm:inline-flex pl-3 md:cols-span-3">
       <h3 className="text-white text-md sm:font-semibold md:text-xl event-title-class">{event.title}</h3>
-      <p className="text-gray-400 text-sm md:text-md  hidden jb:block event-description" style={{wordBreak:"normal"}}>{event.description}</p>
+      <p className="text-gray-400 text-md md:text-md  hidden jb:block event-description" style={{wordBreak:"normal"}}>{event.description}</p>
       <div className="flex  flex-col-reverse  jb:hidden">
 
         <span className="text-gray-400 inline-block mt-2 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'25px'}}>{event.date}</span>
@@ -26,7 +26,7 @@ const EventCard = ({ event }) => (
         </div>
       </div>
     </div>
-    <div className="hidden sm:flex-col jb:block  register-container md:cols-span-3">
+    <div className="hidden sm:flex-col jb:block  register-container md:cols-span-2">
       <span className="text-gray-400 block  flex-row  eventdate-l">{event.date}</span>
       <a
         href=""

@@ -44,6 +44,11 @@
   width: 100%;
 }
 
+.spline-bg-linear{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 81%);;
+  height: 100%;
+}
+
 /* Default canvas styling for larger screens */
 
 

@@ -42,6 +42,9 @@ const Home = () => {
   return (
     <section className="home-section min-h-screen">
       {/* <Menu/> */}
+      <div className='spline-linear-bg'>
+
+     
       <Spline
   style={{
     overflow: 'auto',
@@ -50,6 +53,7 @@ const Home = () => {
   id='spline-component'
   scene="/energy_cube.spline"
 />
+</div>
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>
         <img src={logo}/>

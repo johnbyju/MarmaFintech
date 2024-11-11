@@ -22,7 +22,7 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-black">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
-          <div className="card h-[450px] w-[450px]" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <div className="card " style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
             <h3 className="inline-block text-xl sm:text-3xl text-headerWhite text-a">Product <span className="text-headerLaseWhite">like these...</span></h3>
           </div>
           {cards.map((card) => {
@@ -38,7 +38,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden card"
+      className="group relative  overflow-hidden card"
     >
       <div
         style={{
