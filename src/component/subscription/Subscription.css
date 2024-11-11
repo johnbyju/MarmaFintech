@@ -9,7 +9,7 @@
 .subscription-border{ 
   border-radius: 0.5rem;
   border: 1px solid #353434;
-
+  padding: 75px;
 }
 
 
@@ -254,3 +254,13 @@
     text-align: start;
   }
 } 
+
+
+
+@media (max-width:420px){
+  .subscription-border {
+    border-radius: 0.5rem;
+    border: 1px solid #353434;
+    padding: 35px;
+  }
+}

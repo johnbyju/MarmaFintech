@@ -16,6 +16,7 @@
     "@splinetool/runtime": "^1.9.35",
     "framer-motion": "^11.11.11",
     "gsap": "^3.12.5",
+    "gsap-trial": "^3.12.5",
     "lucide-react": "^0.453.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

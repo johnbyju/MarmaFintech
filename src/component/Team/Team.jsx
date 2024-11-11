@@ -38,14 +38,14 @@ const Team = () => {
     < >
       <div className='px-4'>
         <div className="mobile-view px-4">
-          <p className='text-headerLaseWhite'>We are a team of </p>
-          <p className='text-headerWhite'><span>thinkers</span> & <span>makers</span>...</p>
+          <p className='text-headerLaseWhite text-xl sm:text-3xl'>We are a team of </p>
+          <p className='text-headerWhite text-xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>
         </div>
         <div className='team-wrapper min-h-screen'>
           <div className="team-list-container">
             <div className="text-overlay web-view">
-              <p className='text-headerLaseWhite'>We are a team of </p>
-              <p className='text-headerWhite'><span>thinkers</span> & <span>makers</span>...</p>
+              <p className='text-headerLaseWhite text-xl sm:text-3xl'>We are a team of </p>
+              <p className='text-headerWhite text-xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>
             </div>
             <div className="carousel">
               <div className="group">
