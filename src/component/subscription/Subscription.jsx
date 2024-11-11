@@ -12,7 +12,7 @@ export default function Subscription() {
 
   return (
     <div className="subscription-container">
-      <div className='subscription-border'>
+      <div className='subscription-border p'>
         <div className="subscription-wrapper">
           <h2 className="subscription-title">
             Subscribe to Our Newsletter
