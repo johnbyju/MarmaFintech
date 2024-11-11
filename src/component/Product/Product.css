@@ -1,0 +1,133 @@
+
+.product-main-wrapper {
+  width: 100vw;
+  min-height: 50vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.card {
+
+  min-width: 600px;
+  min-height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.5s ease-out;
+  /* animation: wavy 3s ease-in-out infinite; */
+}
+
+.card h1 {
+  font-size: 3rem;  /* Larger font size for the ID/title */
+  font-weight: bold; /* Bold font for emphasis */
+  text-align: left;  /* Align text to the left */
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 2rem;   /* Font size for the main heading */
+  font-weight: 600;  /* Semi-bold for the title */
+  text-align: left;  /* Align text to the left */
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.2rem; /* Description text size */
+  font-weight: normal; /* Normal font weight for readability */
+  text-align: justify; /* Justify text to align evenly on both sides */
+  line-height: 1.6; /* Spacing between lines for better readability */
+  margin-top: 10px;
+}
+
+
+
+ 
+  
+
+/* Border container with padding */
+.scrollable-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #424242;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+/* Container for the cards */
+.card-container {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+/* Individual card styles */
+.card {
+  width: 300px;
+  height: 180px;
+  background-color: #1a1f3c;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.card:nth-child(2) {
+  background-color: #3c1a1a;
+}
+
+.card:nth-child(3) {
+  background-color: #1a1a1a;
+}
+
+.card:nth-child(4) {
+  background-color: #3c2a1a;
+}
+
+/* Content styling inside each card */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.card-number {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+}
+
+/* Add this to your CSS file or in a global CSS file */
+.scrollbar-hide {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}

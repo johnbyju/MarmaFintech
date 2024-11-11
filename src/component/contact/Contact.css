@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-section{
+  background-color:  #05050566;
+  border: 0.83px solid #6664644F;
+  margin: 20px;
+}
+
+
+.contact-social{
+  background: #16161696;
+  border: 0.64px solid #6664644F;
+  padding: 0px;
+}
+
+.social-item{
+  background: #16161696;
+ border: 0.64px solid #6664644F;
+}
+
+.social-item{
+  color: white;
+  background-color: black;
+}
+
+.social-icon{
+  align-items: start;
+}
+
+.contact-details-icon{
+
+  font-size: 12px;
+  background-color: #151515;
+  border-color: #3f3c3c;
+}
+
+
+
+
+
+
+
+
+
+
+/* ++++++++++++++++++MEDIA QUERY---------------------- */

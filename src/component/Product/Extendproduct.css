@@ -1,0 +1,168 @@
+
+
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    align-items: center; 
+    
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 900px;
+    align-items: center;
+    position: relative;
+    transition: transform 0.5s ease-out;
+  }
+  
+ 
+  
+  .beforecards{
+    font-size: 2rem;
+    color: white;
+    margin-right: 20px; 
+    white-space: nowrap; 
+  }
+  
+  .card {
+    min-width: 600px;
+    min-height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.5s ease-out;
+    animation: wavy 3s ease-in-out infinite;
+  }
+
+  .product-card-data{
+    display: flex;
+    flex-direction: column;
+    justify-content : flex-end;
+    padding: 20px;
+    
+  }
+  
+ 
+  .title-num {
+    font-size: 40px;  
+    font-weight: 400; 
+    text-align: left;  
+  }
+  
+  .product-description{
+    font-size: 1.2rem;   
+    font-weight: 600;  
+    text-align: left;  
+    margin-bottom: 15px;
+  }
+  
+  .product-title{  
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-size: 65px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+  }
+  
+
+  /* @keyframes wavy {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  } */
+  
+
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+
+  /* ------------MEDIA QUERY-------------------- */
+
+  @media (max-width: 1024px) {
+    .card {
+      min-width: 500px;
+      min-height: 350px;
+    }
+    .title-num {
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+    .product-title {
+      font-size: 2rem;
+      font-weight: 200;
+    }
+    .product-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For screens 768px and below */
+  @media (max-width: 768px) {
+    .card {
+      min-width: 400px;
+      min-height: 300px;
+    }
+    .title-num {
+      font-size: 2rem;
+    }
+    .product-title {
+      font-size: 1.5rem;
+    }
+    .product-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* For screens 468px and below */
+  @media (max-width: 468px) {
+    .card {
+      min-width: 300px;
+      min-height: 250px;
+    }
+    .title-num {
+      font-size: 1.5rem;
+    }
+    .product-title {
+      font-size: 1.2rem;
+    }
+    .product-description {
+      font-size: 0.8rem;
+    }
+  }
+  
+  /* For screens 420px and below */
+  @media (max-width: 420px) {
+    /* .card {
+      min-width: 100%;
+      min-height: 200px;
+      margin: 10px;
+    }
+    .title-num {
+      font-size: 1.2rem;
+    }
+    .product-title {
+      font-size: 1rem;
+    }
+    .product-description {
+      font-size: 0.7rem;
+    } */
+  }

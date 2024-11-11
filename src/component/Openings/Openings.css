@@ -1,0 +1,30 @@
+
+.job-listings{
+    min-height: 70vh;
+
+}
+
+ 
+ @media (max-width:412px){
+
+    .job-listings{
+        padding: 20px;
+    }
+
+    /* .filter-btn{
+        padding-left: 30px;
+        padding-right:30px ;
+        
+    }
+    .opening-description{
+            font-size: 10px !important;
+            padding: 0px 16px;
+    }
+    .job-listings{
+        padding:0px 40px 0px  !important;
+    }
+    .job-opening-top{
+        gap: 20px !important;
+        justify-content: space-evenly !important;
+    } */
+}  
