@@ -1,8 +1,11 @@
 import React from 'react'
 import './Mission.css'
-import gif1 from '../../../public/gif/mission1.gif'
-import gif2 from '../../../public/gif/mission2.gif'
-import gif3 from '../../../public/gif/mission3.gif'
+import gif1 from '/gif/mission1.gif'
+import gif2 from '/gif/mission2.gif'
+import gif3 from '/gif/mission3.gif'
+// import gif1 from '../../../public/gif/mission1.gif'
+// import gif2 from '../../../public/gif/mission2.gif'
+// import gif3 from '../../../public/gif/mission3.gif'
 const ExtendMission = () => {
   return (
     <div className='' style={{width:"100%"}}>

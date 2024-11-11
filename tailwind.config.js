@@ -18,7 +18,7 @@ export default {
           'contentWhite':'#DDD8D8',
           'contentgrey':'#938989',
           'sub-head-color' :'#BBB7B7',
-
+        
       },
     },
   },

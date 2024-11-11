@@ -114,6 +114,10 @@
       width: 600px;
       height: 520px;
     }
+
+    .product-card-data{
+      padding: 50px !important;
+    }
     .title-num {
       font-size: 2.5rem;
     }

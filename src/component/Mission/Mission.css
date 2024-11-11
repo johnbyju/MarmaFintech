@@ -3,10 +3,15 @@
   color           : white;
 }
 
-.mission-title{ 
-    padding: 10%;
-    font-size: 34px;
-    text-align: center;
+.mission-title {
+  padding: 10%;
+  font-size: 34px;
+  text-align: center;
+  position: sticky;
+  top: 0; /* Make it sticky at the top of the viewport */
+  z-index: 10; /* Ensure it stays above other elements */
+  background-color: black; /* To ensure it stays visible against the background */
+  color: white;
 }
 
 .text-wrapper p{
@@ -26,18 +31,18 @@ width: 100%;
   }
 
   .section1,
-  .section2,
-  .section3 {
-    position   : sticky;
-    top        : 20px;
-    display    : flex;
-    padding: 100px 10px;
-   
-    border-top : 1px solid #3d3d3d;
-    background : black;
-    align-items: center;
-    justify-content: space-evenly;
-
+.section2,
+.section3 {
+  position: sticky;
+  top: 0; /* Make each section sticky at the top of the viewport */
+  display: flex;
+  padding: 100px 10px;
+  border-top: 1px solid #3d3d3d;
+  background: black;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1; 
+  
     .section1 {
       z-index: 3;
     }
