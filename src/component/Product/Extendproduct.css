@@ -28,13 +28,13 @@
   }
   
   .card {
-    min-width: 600px;
-    min-height: 400px;
+    width: 600px;
+    height: 600px;
     margin: 20px;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
-    padding: 100px;
+    padding: 20px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -44,20 +44,13 @@
     transition: transform 0.5s ease-out;
     animation: wavy 3s ease-in-out infinite;
   }
-
-  .product-card-data{
-    display: flex;
-    flex-direction: column;
-    justify-content : flex-end;
-    padding: 20px;
-    
-  }
   
  
   .title-num {
     font-size: 40px;  
     font-weight: 400; 
     text-align: left;  
+    margin-bottom: 10px;
   }
   
   .product-description{
@@ -70,6 +63,7 @@
   .product-title{  
       font-family: 'PP Neue Montreal', sans-serif;
       font-size: 65px;
+      line-height: 78px;
       text-align: left;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
@@ -97,18 +91,25 @@
 
   /* ------------MEDIA QUERY-------------------- */
 
+  @media (min-width:1440px) {
+
+    .card{
+      width: 950px;
+      height: 800px;
+    }
+    
+  }
+
   @media (max-width: 1024px) {
     .card {
-      min-width: 500px;
-      min-height: 350px;
+      width: 650px;
+      height: 550px;
     }
     .title-num {
-      font-size: 1.5rem;
-      font-weight: 100;
+      font-size: 2.5rem;
     }
     .product-title {
-      font-size: 2rem;
-      font-weight: 200;
+      font-size: 1.8rem;
     }
     .product-description {
       font-size: 1rem;
@@ -117,9 +118,12 @@
   
   /* For screens 768px and below */
   @media (max-width: 768px) {
+    .carsouel{
+      gap: 30px;
+    }
     .card {
-      min-width: 400px;
-      min-height: 300px;
+      width: 500px;
+      height: 450px;
     }
     .title-num {
       font-size: 2rem;
@@ -132,11 +136,18 @@
     }
   }
   
+  @media (max-width:660px) {
+    .card{
+      height: 350px;
+      width: 450px;
+    }
+  }
+  
   /* For screens 468px and below */
   @media (max-width: 468px) {
     .card {
-      min-width: 300px;
-      min-height: 250px;
+      width: 300px;
+      height: 350px;
     }
     .title-num {
       font-size: 1.5rem;
@@ -151,11 +162,12 @@
   
   /* For screens 420px and below */
   @media (max-width: 420px) {
-    /* .card {
-      min-width: 100%;
-      min-height: 200px;
-      margin: 10px;
-    }
+   
+   .card {
+      width: 230px !important ;
+      height: 300px !important;
+    
+    } 
     .title-num {
       font-size: 1.2rem;
     }
@@ -164,5 +176,5 @@
     }
     .product-description {
       font-size: 0.7rem;
-    } */
+    } 
   }

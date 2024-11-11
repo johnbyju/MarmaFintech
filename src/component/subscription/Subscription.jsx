@@ -11,29 +11,31 @@ export default function Subscription() {
   };
 
   return (
-    <div className="subscription-container ">
-      <div className="subscription-wrapper">
-        <h2 className="subscription-title">
-          Subscribe to Our Newsletter
-        </h2>
-        <p className="subscription-description">
-          Subscribe to our newsletter and stay updated!
-        </p>
-        <form onSubmit={handleSubmit} className="subscription-form">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="name@email.com"
-            className="subscription-input"
-            required
-          />
-          <button
-            type="submit"
-            className="subscription-button"
-          >Subscribe&nbsp;now
-          </button>
-        </form>
+    <div className="subscription-container">
+      <div className='subscription-border'>
+        <div className="subscription-wrapper">
+          <h2 className="subscription-title">
+            Subscribe to Our Newsletter
+          </h2>
+          <p className="subscription-description">
+            Subscribe to our newsletter and stay updated!
+          </p>
+          <form onSubmit={handleSubmit} className="subscription-form">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="name@email.com"
+              className="subscription-input"
+              required
+            />
+            <button
+              type="submit"
+              className="subscription-button"
+            >Subscribe&nbsp;now
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

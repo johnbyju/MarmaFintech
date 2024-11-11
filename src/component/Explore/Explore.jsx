@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, DotIcon } from 'lucide-react';
 import './Explore.css'
-// import event from '../../../public/ '
+
 
 const EventCard = ({ event }) => (
   <div className="md:grid-cols-12  flex flex-row min-h-30 sm:flex-row gap-1 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
@@ -10,7 +10,7 @@ const EventCard = ({ event }) => (
     </div>
     <div className="flex flex-col justify-center sm:inline-flex pl-3 md:cols-span-5">
       <h3 className="text-white text-md sm:font-semibold md:text-xl event-title-class">{event.title}</h3>
-      <p className="text-gray-400 text-sm md:text-md  hidden jb:block event-description" style={{wordBreak:"normal" , width:"70%"}}>{event.description}</p>
+      <p className="text-gray-400 text-sm md:text-md  hidden jb:block event-description" style={{wordBreak:"normal"}}>{event.description}</p>
       <div className="flex  flex-col-reverse  jb:hidden">
 
         <span className="text-gray-400 inline-block mt-2 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'25px'}}>{event.date}</span>

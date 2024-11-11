@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Home.css'; 
+import './Home.css'; // Import the integrated CSS
 import Spline from '@splinetool/react-spline';
 import Menu from '../Menuicon/Menu';
 import logo from '../../../public/logo.png'
@@ -47,7 +47,6 @@ const Home = () => {
     overflow: 'auto',
     filter: 'brightness(0.5)',
   }}
-  id='spline-component'
   scene="/energy_cube.spline"
 />
 

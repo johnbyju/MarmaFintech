@@ -32,7 +32,6 @@ const Team = () => {
       image: '/images/profile/profile3.png',
       linkedin: 'https://in.linkedin.com/',
     },
-    // Add more
   ];
 
   return (

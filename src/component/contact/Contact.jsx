@@ -72,7 +72,7 @@ export default function ContactSection() {
               </div>             
             </div>
           </div>
-          <div className="p-8 mt-4 md:mt-0 max-w-md mx-auto bg-black border  rounded-lg shadow-md">
+          <div className="p-8 mt-4   md:mt-0 max-w-md mx-auto bg-black border  rounded-lg shadow-md">
             <h2 className="text-xl font-semibold text-white mb-4 text-center">Share your feedback</h2>
             <form className="space-y-4">
               <div className="flex space-x-4 pb-0.5">
