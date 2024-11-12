@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Openings.css';
 
 export default function JobApplicationForm(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +70,8 @@ export default function JobApplicationForm(props) {
       });
     }
   };
-  const [isLoading,setIsLoading]=useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -84,7 +86,7 @@ export default function JobApplicationForm(props) {
     data.append('currentsalary', formData.currentsalary);
     data.append('expectedsalary', formData.expectedsalary);
     if (formData.Portfoliolink){
-    data.append('Portfoliolink', formData.Portfoliolink);
+      data.append('Portfoliolink', formData.Portfoliolink);
     }
     data.append('resume', formData.resume);
 
@@ -111,39 +113,36 @@ export default function JobApplicationForm(props) {
         expectedsalary: '',
         Portfoliolink: '',
         resume: '',
-      })
-      props?.onClose()
+      });
+      props?.onClose();
     } catch (error) {
       console.error('Error submitting application:', error);
       alert('Failed to submit application. Please try again later.');
-    }
-    finally{
-      setIsLoading(false)
+    } finally {
+      setIsLoading(false);
     }
   };
-  const handleClose=()=>{
-    props?.onClose()
-  }
+
+  const handleClose = () => {
+    props?.onClose();
+  };
 
   return (
     <div className="">
-     
-
-
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
-        <div className="bg-gray-500 text-white rounded-lg p-6 w-full max-w-md relative ">
+      <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-6">
+        <div className="apply-section text-white rounded-lg p-6 w-full max-w-lg md:max-w-xl relative">
           <button
             onClick={handleClose}
             className="absolute right-4 top-4 text-white hover:text-white"
           >
             Close
           </button>
-          <h2 className="text-2xl font-bold mb-4">Apply Jobs</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">Apply for Jobs</h2>
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div
-              className={`relative border-2 border-dashed rounded-lg p-6 transition-colors
-                  ${dragActive ? 'border-blue-500' : 'border-gray-300'}
-                  hover:border-blue-500`}
+              className={`relative border border-dashed rounded-lg p-6 transition-colors
+                ${dragActive ? 'border-blue-500' : 'border-gray-300'}
+                hover:border-blue-500`}
               onDragEnter={handleDrag}
               onDragLeave={handleDrag}
               onDragOver={handleDrag}
@@ -157,7 +156,7 @@ export default function JobApplicationForm(props) {
                 onChange={handleFileChange}
               />
               <div className="text-center">
-                <div className="text-sm md:text-lg text-gray-600 mb-1">Upload Resume</div>
+                <div className="text-sm md:text-lg text-gray-600 mb-2">Upload Resume</div>
                 {file ? (
                   <div className="text-sm font-medium">{file.name}</div>
                 ) : (
@@ -168,44 +167,44 @@ export default function JobApplicationForm(props) {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white">Name*</label>
+                <label htmlFor="name" className="block text-sm md:text-base font-medium text-white">Name*</label>
                 <input
                   value={formData.name}
                   name="name"
                   id="name"
                   type="text"
                   required
-                  className="mt-1 block w-full pl-3 rounded-md border border-gray-300 bg-black"
+                  className="mt-1 block w-full pl-3 border py-1 border-gray-400 rounded-md bg-black text-white"
                   placeholder="Enter full name"
-                  onChange={(e) => handleChange(e)}
+                  onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white">Email*</label>
+                <label htmlFor="email" className="block text-sm md:text-base font-medium text-white">Email*</label>
                 <input
                   value={formData.email}
                   name="email"
                   id="email"
                   type="email"
                   required
-                  className="mt-1 block w-full rounded-md border border-gray-300 bg-black shadow-sm text-white"
+                  className="mt-1 pl-3 block w-full border py-1 border-gray-400 rounded-md bg-black shadow-sm text-white"
                   placeholder="Enter email"
                   onChange={handleChange}
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
               <div>
-                <label htmlFor="experience" className="block text-sm md:text-lg">Experience*</label>
+                <label htmlFor="experience" className="block text-sm md:text-base font-medium text-white">Experience*</label>
                 <select
                   id="experience"
                   name="experience"
                   value={formData.experience}
                   required
-                  className="mt-1 pt-1 block w-full rounded-md border-gray-300 bg-black text-sm text-white "
+                  className="mt-1 p-1 block w-full py-1 rounded-md border border-gray-400 bg-black text-sm text-white"
                   onChange={handleChange}
                 >
                   <option value="">Select Experience</option>
@@ -215,66 +214,69 @@ export default function JobApplicationForm(props) {
                 </select>
               </div>
               <div>
-                <label htmlFor="experience" className="block text-sm font-medium text-white">Notice Period*</label>
+                <label htmlFor="noticeperiod" className="block text-sm md:text-base font-medium text-white">Notice Period*</label>
                 <input
                   value={formData.noticeperiod}
                   name="noticeperiod"
                   id="noticeperiod"
                   type="text"
                   required
-                  className="mt-1 pl-3 block w-full rounded-md border-gray-300 bg-black"
-                  placeholder="Enter Notice Period"
+                  className="mt-1 pl-2 p-0.5 block w-full  rounded-md border border-gray-400 bg-black"
+                  placeholder="Notice Period"
                   onChange={handleChange}
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
               <div>
-                <label htmlFor="current-salary" className="block text-sm font-medium text-white">Current salary*</label>
+                <label htmlFor="currentsalary" className="block text-sm md:text-base font-medium text-white">Current Salary*</label>
                 <input
                   value={formData.currentsalary}
                   name="currentsalary"
+                  id="currentsalary"
                   type="text"
                   required
-                  placeholder='In LPA'
-                  className="mt-1 block pl-3 w-full rounded-md border-gray-300 bg-black text-white shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50  "
+                  placeholder="In LPA"
+                  className="mt-1 block pl-3 w-full py-1 rounded-md border border-gray-400 bg-black text-white"
                   onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="expected-salary" className="block text-sm font-medium  text-white">Expected salary*</label>
+                <label htmlFor="expectedsalary" className="block text-sm md:text-base font-medium text-white">Expected Salary*</label>
                 <input
                   value={formData.expectedsalary}
                   name="expectedsalary"
+                  id="expectedsalary"
                   type="text"
                   required
-                  placeholder='In LPA'
-                  className="mt-1 block w-full rounded-md pl-3 bg-black"
+                  placeholder="In LPA"
+                  className="mt-1 block pl-3 w-full py-1 rounded-md border border-gray-400 bg-black text-white"
                   onChange={handleChange}
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="portfolio" className="block text-sm text-center font-medium text-white">Portfolio or LinkedIn URL (Optional)</label>
+              <label htmlFor="Portfoliolink" className="block text-sm md:text-base font-medium text-white">Portfolio or LinkedIn URL (Optional)</label>
               <input
                 value={formData.Portfoliolink}
                 name="Portfoliolink"
                 type="url"
-                className="mt-1 block w-full rounded-md border-gray-300  text-center shadow-sm bg-black  "
+                className="mt-1 block w-full py-1 rounded-md border border-gray-400 bg-black text-white"
                 placeholder="Enter URL"
                 onChange={handleChange}
               />
             </div>
-                  <div className='flex align-middle justify-center'>
-                  <button type="submit" className="bg-black text-white px-4 py-2 rounded-md" disabled={isLoading} >{isLoading?'Submitting...':"Apply"}</button>
-                  </div>
-            
+
+            <div className="flex justify-center">
+              <button type="submit" className="bg-black text-white  border px-12 py-2 rounded-md" disabled={isLoading}>
+                {isLoading ? 'Submitting...' : 'Apply'}
+              </button>
+            </div>
           </form>
         </div>
       </div>
-
     </div>
   );
 }

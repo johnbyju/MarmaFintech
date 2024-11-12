@@ -4,7 +4,7 @@ import './Explore.css'
 
 
 const EventCard = ({ event }) => (
-  <div className="md:grid-cols-12 p-5 flex flex-row min-h-30 sm:flex-row gap-1 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
+  <div className="md:grid-cols-12 p-5 flex flex-row align-middle justify-center min-h-30 sm:flex-row gap-2 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
     <div className=" pt-2 rounded-lg flex-shrink-0   md:cols-span-8">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVuR0yQGpIwG_ZtdUeR-ajniNKxpFbK5lUyw&s" alt={`${event.title}-image`} className='event-image' />
     </div>
@@ -70,7 +70,7 @@ export default function ExploreLatest() {
           <h2 className="text-white text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 explore-header">
             EXPLORE THE <br className=''/> LATEST
           </h2>
-          <p className="text-gray-400 text-md sm:w-2/3 sm:mt-0 mt-2 sm:ml-32 explore-subheader">
+          <p className="text-md sm:w-2/3 sm:mt-0 mt-2 sm:ml-32 text-sub-head-color">
             MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>

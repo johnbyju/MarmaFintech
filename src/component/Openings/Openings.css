@@ -4,6 +4,12 @@
 
 }
 
+.apply-section {
+    background-color: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(13.64px); 
+    box-shadow: inset -1.62px -1.62px 81.17px rgba(255, 255, 255, 0.02); 
+}
+
  
  @media (max-width:412px){
 

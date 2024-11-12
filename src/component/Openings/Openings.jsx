@@ -40,7 +40,7 @@ export default function JobListings() {
           </div>
         </div>
         <div>
-          <p className="text-sm sm:text-base mb-6 sm:cols-4 opening-description">
+          <p className="text-sm sm:text-base mb-6 sm:cols-4 opening-description text-sub-head-color">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
     
@@ -76,21 +76,21 @@ export default function JobListings() {
             ))}
           </div>
             {filteredJobs.map((job) => (
-              <div key={job.id} className=" border-gray-600 ">
+              <div key={job.id} className=" border-gray-600 apply-container">
                 <div
                   className="flex justify-between items-center py-2 px-2 sm:p-4 cursor-pointer"
                   onClick={() => toggleRole(job.id)}
                 >
                   <div>
-                    <h3 className="font-semibold text-sm sm:text-lg">{job.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-400">{job.location}</p>
+                    <h3 className="font-semibold text-md sm:text-lg">{job.title}</h3>
+                    <p className="text-sm sm:text-md text-gray-400">{job.location}</p>
                   </div>
                   {expandedRole === job.id ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
                 {expandedRole === job.id && (
                   <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
-                    <p className="text-xs sm:text-sm">{job.description}</p>
-                    <button className="bg-black text-white rounded-lg border-gray-900 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
+                    <p className="text-sm sm:text-md leading-relaxed">{job.description}</p>
+                    <button className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
                 <JobApplicationForm  Job={job.title} onClose={closeModal}/>
             </Modal>

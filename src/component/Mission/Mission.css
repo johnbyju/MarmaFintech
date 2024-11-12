@@ -85,7 +85,7 @@ width: 100%;
     gap: 40px;
   }
   .text-wrapper p{
-    font-size: 22px;
+    font-size: 28px;
   }
   .img-wrapper{
     width: fit-content;
@@ -103,7 +103,7 @@ width: 100%;
   }
   
   .text-wrapper p{
-   font-size: 18px;
+   font-size: 26px;
   }
   .img-wrapper{
     width: 150px !important;

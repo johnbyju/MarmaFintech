@@ -2,7 +2,7 @@ import React from 'react';
 import './Contact.css'
 import { FaLinkedinIn, FaInstagram, FaDiscord, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Phone } from 'lucide-react';
 export default function ContactSection() {
   return (
 
@@ -47,7 +47,7 @@ export default function ContactSection() {
               <div className='flex flex-col'>
                 <div className='flex flex-row items-center gap-6 '>
                   <div className='contact-icons px-2 py-2 rounded-md'>
-                  <FaPhone className="text-xl contact-details-icon text-white " />
+                  <Phone className="text-xl contact-details-icon text-white " />
                   </div>
                   <div className=''>
                   <span className="font-semibold text-white text-sm md:text-lg">Phone</span>
@@ -79,27 +79,27 @@ export default function ContactSection() {
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-1/2 p-3 sm:w-full bg-black text-white rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+                  className="w-full p-3 sm:w-full bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
                 />
-                <input
+                {/* <input
                   type="email"
                   placeholder="Email"
-                  className="w-1/2 p-3 text-md  block sm:hidden bg-black text-white rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
-                />
+                  className="w-1/2 p-3 text-md  block sm:hidden bg-black border border-gray-600 text-white rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+                /> */}
               </div>
               <input
                 type="email"
                 placeholder="Email"
-                className=" p-3 w-full block bg-black text-white rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+                className=" p-3 w-full block bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
               />
               <textarea
                 placeholder="Message"
                 rows="4"
-                className="w-full p-3 bg-black text-white rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+                className="w-full p-3 bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-black text-white font-semibold py-3 rounded form-submit-btn hover:bg-gray-600 transition duration-300"
+                className="w-full bg-black text-white font-semibold py-3 rounded border-gray-400 form-submit-btn  transition duration-300"
               >
                 Send your Message
               </button>
@@ -107,7 +107,9 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <p className='text-center pt-4'> Marma Fintech C 2024</p>
+      <hr className="mt-8 md:mt-14 border-0 border-t-2 border-gray-400" />
+
+      <p className='text-center mt-4 text-headerWhite'>© Marma Fintech 2024</p>
     </div>
   );
 }
