@@ -76,9 +76,6 @@
   transition: color 0.3s ease;
 }
 
-.menu-content ul li a:hover {
-  color: #ccc;
-}
 
 .menu-content .contact-us {
   font-weight: 600;

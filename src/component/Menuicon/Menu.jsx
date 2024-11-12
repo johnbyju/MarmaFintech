@@ -20,12 +20,12 @@ export default function Menu() {
       {isOpen && (
         <div className="menu-overlay">
           <nav className="menu-content">
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#event">Event</a></li>
-              <li><a href="#contact" className="contact-us">Contact us</a></li>
+          <ul>
+              <li><a href="#mission" onClick={toggleMenu}>Mission</a></li>
+              <li><a href="#products" onClick={toggleMenu}>Products</a></li>
+              <li><a href="#team" onClick={toggleMenu}>Team</a></li>
+              <li><a href="#event" onClick={toggleMenu}>Event</a></li>
+              <li><a href="#contact" onClick={toggleMenu} className="contact-us">Contact us</a></li>
             </ul>
             <div className="social-icons">
               <a href="#" aria-label="Twitter">

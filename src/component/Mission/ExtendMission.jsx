@@ -8,7 +8,7 @@ import gif3 from '/gif/mission3.gif'
 // import gif3 from '../../../public/gif/mission3.gif'
 const ExtendMission = () => {
   return (
-    <div className='' style={{width:"100%"}}>
+    <div className='' style={{width:"100%"}} id='mission'>
       <div className='mission-title'>
         <h3 className=' text-lg xsm:text-2xl jb:text-4xl'>OUR MISSION</h3>
       </div>

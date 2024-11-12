@@ -36,7 +36,7 @@ const Team = () => {
 
   return (
     < >
-      <div className='px-4'>
+      <div className='px-4' id='team'>
         <div className="mobile-view px-4">
           <p className='text-headerLaseWhite text-xl sm:text-3xl'>We are a team of </p>
           <p className='text-headerWhite text-xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>

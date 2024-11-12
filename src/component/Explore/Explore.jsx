@@ -64,7 +64,7 @@ export default function ExploreLatest() {
   ];
 
   return (
-    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-4 md:p-8">
+    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-4 md:p-8" id='event'>
       <div className="">
         <div className="flex flex-col sm:flex-row sm:items-start mb-8 space-y-4 sm:space-y-0 sm:space-x-8 jb:gap-40">
           <h2 className="text-white text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 explore-header">

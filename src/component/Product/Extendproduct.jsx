@@ -5,7 +5,7 @@ import './Extendproduct.css';
 
 const Extendproduct = () => {
   return (
-    <div className="">
+    <div className="" id="products">
       <HorizontalScrollCarousel />
     </div>
   );
@@ -36,10 +36,7 @@ const HorizontalScrollCarousel = () => {
 
 const Card = ({ card }) => {
   return (
-    <div
-      key={card.id}
-      className="group relative  overflow-hidden card"
-    >
+    <a href={card.link} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden card">
       <div
         style={{
           backgroundImage: `${card.url}`,
@@ -53,12 +50,10 @@ const Card = ({ card }) => {
         <p className="uppercase text-white product-title">{card.title}</p>
         <span className="product-description">{card.description}</span>
       </div>
-
-      {/* 2. Right Arrow Icon - Add this div for the icon */}
       <div className="absolute top-4 right-4 z-20 text-white">
         <ArrowUpRight size={30} />
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -71,6 +66,7 @@ const cards = [
     description:
       "Redefining Bitcoin and Ethereum Transactions in India with INRFalcon for Lightning-Fast Trading.",
     url: "url('/product/throughbit.avif')",
+    link: "https://throughbit.com"
   },
   {
     id: "002",
@@ -78,6 +74,7 @@ const cards = [
     description:
       "Your Gateway to Staying informed, Engaged, and Leading the Way in the Crypto Space",
     url: "url('product/coindairybg.png')",
+    link: "https://coindairy.com"
   },
   {
     id: "003",
@@ -85,6 +82,7 @@ const cards = [
     description:
       "Dive into the Future of RealEstate and Own Your NFT Land from Any Corner of the Globe.",
     url: "url('/product/squarenft.png')",
+    link: "https://squarenft.com"
   },
   {
     id: "004",
@@ -92,5 +90,6 @@ const cards = [
     description:
       "Your Innovative Exchange Hub Connecting Cash and Cryptocurrency for Easy Bitcoin Transactions.",
     url: "url('/product/bitcoin.png')",
+    link: "https://www.thebitcoin.com/  "
   },
 ];
