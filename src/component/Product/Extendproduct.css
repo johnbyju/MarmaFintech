@@ -102,11 +102,16 @@
 
   @media (min-width:1440px) {
 
-    .card{
-      width: 950px;
-      height: 800px;
+    .card {
+      width: 900px;
+      height: 700px;
+
+    .product-card-data{
+      padding:0px 0px 80px 50px;
     }
+  }
     
+
   }
 
   @media (max-width: 1024px) {

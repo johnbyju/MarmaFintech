@@ -69,9 +69,11 @@ export default function JobApplicationForm(props) {
       });
     }
   };
+  const [isLoading,setIsLoading]=useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const data = new FormData();
     data.append('name', formData.name);
@@ -81,7 +83,9 @@ export default function JobApplicationForm(props) {
     data.append('noticeperiod', formData.noticeperiod);
     data.append('currentsalary', formData.currentsalary);
     data.append('expectedsalary', formData.expectedsalary);
+    if (formData.Portfoliolink){
     data.append('Portfoliolink', formData.Portfoliolink);
+    }
     data.append('resume', formData.resume);
 
     try {
@@ -108,11 +112,18 @@ export default function JobApplicationForm(props) {
         Portfoliolink: '',
         resume: '',
       })
+      props?.onClose()
     } catch (error) {
       console.error('Error submitting application:', error);
       alert('Failed to submit application. Please try again later.');
     }
+    finally{
+      setIsLoading(false)
+    }
   };
+  const handleClose=()=>{
+    props?.onClose()
+  }
 
   return (
     <div className="">
@@ -122,8 +133,8 @@ export default function JobApplicationForm(props) {
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
         <div className="bg-gray-500 text-white rounded-lg p-6 w-full max-w-md relative ">
           <button
-            onClick={() => setIsOpen(false)}
-            className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
+            onClick={handleClose}
+            className="absolute right-4 top-4 text-white hover:text-white"
           >
             Close
           </button>
@@ -194,7 +205,7 @@ export default function JobApplicationForm(props) {
                   name="experience"
                   value={formData.experience}
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 bg-black text-md text-white shadow-sm"
+                  className="mt-1 pt-1 block w-full rounded-md border-gray-300 bg-black text-sm text-white "
                   onChange={handleChange}
                 >
                   <option value="">Select Experience</option>
@@ -211,7 +222,7 @@ export default function JobApplicationForm(props) {
                   id="noticeperiod"
                   type="text"
                   required
-                  className="mt-1 block w-full rounded-md border-gray-300 bg-black"
+                  className="mt-1 pl-3 block w-full rounded-md border-gray-300 bg-black"
                   placeholder="Enter Notice Period"
                   onChange={handleChange}
                 />
@@ -227,37 +238,37 @@ export default function JobApplicationForm(props) {
                   type="text"
                   required
                   placeholder='In LPA'
-                  className="mt-1 block w-full rounded-md border-gray-300 bg-black text-white shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50  "
+                  className="mt-1 block pl-3 w-full rounded-md border-gray-300 bg-black text-white shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50  "
                   onChange={handleChange}
                 />
               </div>
               <div>
-                <label htmlFor="expected-salary" className="block text-sm font-medium text-white">Expected salary*</label>
+                <label htmlFor="expected-salary" className="block text-sm font-medium  text-white">Expected salary*</label>
                 <input
                   value={formData.expectedsalary}
                   name="expectedsalary"
                   type="text"
                   required
                   placeholder='In LPA'
-                  className="mt-1 block w-full rounded-md bg-black"
+                  className="mt-1 block w-full rounded-md pl-3 bg-black"
                   onChange={handleChange}
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="portfolio" className="block text-sm font-medium text-white">Portfolio or LinkedIn URL (Optional)</label>
+              <label htmlFor="portfolio" className="block text-sm text-center font-medium text-white">Portfolio or LinkedIn URL (Optional)</label>
               <input
                 value={formData.Portfoliolink}
                 name="Portfoliolink"
                 type="url"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-black  "
+                className="mt-1 block w-full rounded-md border-gray-300  text-center shadow-sm bg-black  "
                 placeholder="Enter URL"
                 onChange={handleChange}
               />
             </div>
                   <div className='flex align-middle justify-center'>
-                  <button type="submit" className="bg-black text-white px-4 py-2 rounded hover:bg-blue-600">Submit</button>
+                  <button type="submit" className="bg-black text-white px-4 py-2 rounded-md" disabled={isLoading} >{isLoading?'Submitting...':"Apply"}</button>
                   </div>
             
           </form>

@@ -92,7 +92,7 @@ export default function JobListings() {
                     <p className="text-xs sm:text-sm">{job.description}</p>
                     <button className="bg-black text-white rounded-lg border-gray-900 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
-                <JobApplicationForm  Job={job.title}/>
+                <JobApplicationForm  Job={job.title} onClose={closeModal}/>
             </Modal>
                   </div>
                 )}
