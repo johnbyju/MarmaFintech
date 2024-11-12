@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Plus, X } from 'lucide-react';
 import './Openings.css';
+import JobApplicationForm from './JobApplicationForm';
 
 const jobListings = [
   { id: 1, title: 'Creative Front-end Developer', location: 'Harrogate (Flexible) / Full Time', category: 'Development', description: 'We are seeking a talented Front-end Developer to join our creative team. The ideal candidate will have a strong understanding of modern web technologies and a passion for creating engaging user experiences.' },
@@ -94,3 +95,4 @@ export default function JobListings() {
     </div>
   );
 }
+

@@ -21,7 +21,6 @@ const Border = () => {
                 <Team />
                 <Openings />
                 <Explore />
-                <Subscription />
                 <Contact />
             </div>
         </>
