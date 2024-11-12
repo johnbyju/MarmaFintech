@@ -6,7 +6,7 @@ const Bgvedio = () => {
     <>
       <div className="video-container min-h-screen relative" >
         <div className='linear-bg min-h-screen'>
-          <video autoPlay loop muted className="background-video">
+          <video autoPlay loop muted playsInline className="background-video">
             <source src="https://sapphire-large-cougar-300.mypinata.cloud/ipfs/QmWaqmrEnEHUhu4gDHhdV87rk8w4qFqjQUoFCuXicE8seD" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
