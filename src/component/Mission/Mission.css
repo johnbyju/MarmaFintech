@@ -117,7 +117,7 @@ width: 100%;
 @media (max-width:480px){
 
   .text-wrapper p{
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .img-wrapper{
@@ -128,7 +128,7 @@ width: 100%;
 @media (max-width:385px){
 
   .text-wrapper p{
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .img-wrapper{
