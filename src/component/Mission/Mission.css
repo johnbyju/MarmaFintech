@@ -34,7 +34,7 @@ width: 100%;
 .section2,
 .section3 {
   position: sticky;
-  top: 0; /* Make each section sticky at the top of the viewport */
+  top: 0; 
   display: flex;
   padding: 100px 10px;
   border-top: 1px solid #3d3d3d;
@@ -42,7 +42,7 @@ width: 100%;
   align-items: center;
   justify-content: space-evenly;
   z-index: 1; 
-  
+
     .section1 {
       z-index: 3;
     }
