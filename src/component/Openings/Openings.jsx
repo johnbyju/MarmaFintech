@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ChevronDown, Plus, X } from 'lucide-react';
 import './Openings.css';
 import JobApplicationForm from './JobApplicationForm';
+import Modal from './Modal';
+import { log } from 'three/webgpu';
 
 const jobListings = [
   { id: 1, title: 'Creative Front-end Developer', location: 'Harrogate (Flexible) / Full Time', category: 'Development', description: 'We are seeking a talented Front-end Developer to join our creative team. The ideal candidate will have a strong understanding of modern web technologies and a passion for creating engaging user experiences.' },
@@ -13,13 +15,17 @@ export default function JobListings() {
   const [openRoles, setOpenRoles] = useState(true);
   const [expandedRole, setExpandedRole] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const toggleRoles = () => setOpenRoles(!openRoles);
   const toggleRole = (id) => setExpandedRole(expandedRole === id ? null : id);
 
   const filteredJobs = activeFilter === 'All'
     ? jobListings
     : jobListings.filter(job => job.category === activeFilter);
+    
 
   return (
     <div className="job-listings bg-black text-white mt-20 sm:py-6 px-4 md:p-8 font-sans">
@@ -84,7 +90,10 @@ export default function JobListings() {
                 {expandedRole === job.id && (
                   <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
                     <p className="text-xs sm:text-sm">{job.description}</p>
-                    <button className="bg-black text-white rounded-lg border-gray-900 py-1 px-2 mt-2 sm:py-2 sm:px-4">Apply Now</button>
+                    <button className="bg-black text-white rounded-lg border-gray-900 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
+                    <Modal isOpen={isModalOpen} onClose={closeModal}>
+                <JobApplicationForm  Job={job.title}/>
+            </Modal>
                   </div>
                 )}
               </div>
@@ -95,4 +104,3 @@ export default function JobListings() {
     </div>
   );
 }
-

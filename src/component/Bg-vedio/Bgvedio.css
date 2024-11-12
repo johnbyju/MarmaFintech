@@ -53,9 +53,9 @@ justify-content: center;
  
 
   .content p {
-    font-size: 20px;
+    font-size: px;
   }
-}
+} 
 
 
 
@@ -84,19 +84,31 @@ justify-content: center;
 
 @media (max-width:985px){
   .content p{
-    font-size: 28px;
+    font-size: 32px;
   }
   .content{
-    padding: 24px;
+    padding: 60px;
   }
 }
 
+@media (max-width: 768px) {
+ 
+
+  .content p {
+    font-size: 28px;
+  }
+  .content{
+    padding: 60px;
+  }
+} 
+
 @media (max-width:678px){
   .content{
-    padding: 52px;
+    padding: 32px;
   }
   .content p{
     font-size: 30px;
+    padding: 20px;
   }
 }
 
@@ -104,12 +116,7 @@ justify-content: center;
 @media (max-width: 480px) {
   
   .content p {
-    font-size: 23px;
-    padding: 39px 7px;
+    font-size: 24px;
 }
-
-  .content{
-    padding: 20px 10px;
-  }
   
 }
