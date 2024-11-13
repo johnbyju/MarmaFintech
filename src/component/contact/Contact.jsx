@@ -46,7 +46,7 @@ export default function ContactSection() {
               </div>
               <div className='flex flex-col'>
                 <div className='flex flex-row items-center gap-6 '>
-                  <div className='contact-icons px-2 py-2 rounded-md'>
+                  <div className='contact-icons px-1.5 py-1.5 rounded-md'>
                   <Phone className="text-xl contact-details-icon text-white " />
                   </div>
                   <div className=''>

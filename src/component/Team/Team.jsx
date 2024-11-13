@@ -55,8 +55,8 @@ const Team = () => {
                       <img src={team.image} alt={team.name} className="profile-pic" />
                       <div className="info">
                         <div className='official-name'>
-                          <h3>{team.name}</h3>
-                          <p>{team.position}</p>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='' style={{color:'#C9C7C782'}}>{team.position}</p>
                         </div>
                         <a href={team} target="_blank" rel="noopener noreferrer">
                           <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
@@ -73,8 +73,8 @@ const Team = () => {
                       <img src={team.image} alt={team.name} className="profile-pic" />
                       <div className="info">
                         <div>
-                          <h3>{team.name}</h3>
-                          <p>{team.position}</p>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p style={{color:'#C9C7C782'}}>{team.position}</p>
                         </div>
                         <a href={team} target="_blank" rel="noopener noreferrer">
                           <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />

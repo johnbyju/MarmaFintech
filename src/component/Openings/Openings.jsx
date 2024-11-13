@@ -40,7 +40,7 @@ export default function JobListings() {
           </div>
         </div>
         <div>
-          <p className="text-sm sm:text-base pb-10 pt-8 sm:cols-4 opening-description text-sub-head-color">
+          <p className="text-sm sm:text-base pb-10 pt-6   sm:cols-4 opening-description text-sub-head-color">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
         </div>

@@ -9,16 +9,17 @@ const EventCard = ({ event }) => (
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVuR0yQGpIwG_ZtdUeR-ajniNKxpFbK5lUyw&s" alt={`${event.title}-image`} className='event-image' />
     </div>
     <div className="flex flex-col justify-center sm:inline-flex pl-3 md:cols-span-3">
-      <h3 className="text-white text-md sm:font-semibold md:text-xl event-title-class">{event.title}</h3>
+      <h3 className="text-white font-light sm:font-normal text-md  md:text-xl event-title-class">{event.title}</h3>
       <p className="text-gray-400 text-md md:text-md  hidden jb:block event-description" style={{wordBreak:"normal"}}>{event.description}</p>
       <div className="flex  flex-col-reverse  jb:hidden">
 
-        <span className="text-gray-400 inline-block mt-2 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'25px'}}>{event.date}</span>
+        {/* <span className="text-gray-400 inline-block mt-2 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'25px'}}>{event.date}</span> */}
+        <span className=" inline-block mt-4 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'15px'}}>{event.date}</span>
 
-        <div className='flex justify-start pl-2'>
+        <div className='flex justify-start '>
           <a
             href=""
-            className="register-btn py-1 px-3"
+            className="register-btn py-0.5 px-3"
           >
             Register
             <ArrowUpRight className=''/>
@@ -27,7 +28,7 @@ const EventCard = ({ event }) => (
       </div>
     </div>
     <div className="hidden sm:flex-col jb:block  register-container md:cols-span-2">
-      <span className="text-gray-400 block  flex-row  eventdate-l">{event.date}</span>
+      <span className=" block  flex-row  eventdate-l">{event.date}</span>
       <a
         href=""
         className="register-btn">
@@ -67,10 +68,10 @@ export default function ExploreLatest() {
     <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-4 md:p-8" id='event'>
       <div className="">
         <div className="flex flex-col sm:flex-row sm:items-start mb-8 space-y-4 sm:space-y-0 sm:space-x-8 jb:gap-40">
-          <h2 className="text-white text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 explore-header">
+          <h2 className=" text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 text-largeHeader">
             EXPLORE THE <br className=''/> LATEST
           </h2>
-          <p className="text-md sm:w-2/3 mt-4  sm:ml-32 text-sub-head-color">
+          <p className="text-md sm:w-2/3 mt-4   sm:ml-32 text-sub-head-color">
             MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>
