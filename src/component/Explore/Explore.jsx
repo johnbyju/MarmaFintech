@@ -70,7 +70,7 @@ export default function ExploreLatest() {
           <h2 className="text-white text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 explore-header">
             EXPLORE THE <br className=''/> LATEST
           </h2>
-          <p className="text-md sm:w-2/3 sm:mt-0 mt-2 sm:ml-32 text-sub-head-color">
+          <p className="text-md sm:w-2/3 mt-4  sm:ml-32 text-sub-head-color">
             MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>

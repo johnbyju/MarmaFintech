@@ -6,23 +6,23 @@ import logo from '../../../public/logo.png'
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  // useEffect(() => {
+  //   const handleScroll = () => {
       
-      if (window.scrollY > 70) {
-        setIsScrolled(true);
-        console.log("scroll trigered");
-      } else {
-        setIsScrolled(false); 
-      }
-    };
+  //     if (window.scrollY > 70) {
+  //       setIsScrolled(true);
+  //       console.log("scroll trigered");
+  //     } else {
+  //       setIsScrolled(false); 
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
  
   const [isFixed, setIsFixed] = useState(false);

@@ -31,7 +31,7 @@ export default function JobListings() {
     <div className="job-listings bg-black text-white mt-20 sm:py-6 px-4 md:p-8 font-sans">
       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
         <div className='flex felx-row justify-between gap-10 job-opening-top pt-3'>
-          <h1 className="text-xl sm:text-3xl font-bold mb-4 sm:">JOIN&nbsp;OUR<br/>TEAM</h1>
+          <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br/>TEAM</h1>
           <div className='inline-block jb:hidden'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
@@ -40,7 +40,7 @@ export default function JobListings() {
           </div>
         </div>
         <div>
-          <p className="text-sm sm:text-base mb-6 sm:cols-4 opening-description text-sub-head-color">
+          <p className="text-sm sm:text-base pb-10 pt-8 sm:cols-4 opening-description text-sub-head-color">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
     
@@ -50,40 +50,40 @@ export default function JobListings() {
 
       {openRoles && (
         <div className=''>
-          <div className="flex justify-center  md:hidden gap-2 sm:gap-6 mb-4 filter-btn">
+          <div className="flex justify-center px-4  md:hidden gap-2 sm:gap-6 mb-4 filter-btn">
             {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 id='job-opening-btn'
-                className={`rounded-lg text-sm border border-white py-1 px-1  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-transparent text-white'}`}
+                className="rounded-lg text-sm sm:text-md  py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer bg-jobFilter"
               >
                 {filter}
               </button>
             ))}
           </div>
-          <div className='border rounded-lg' style={{ backgroundColor: '#161616E3', borderColor: ' #444444' }}>
-          <div className="p-6 justify-start gap-2 sm:gap-6 mb-4 filter-btn hidden md:flex">
+          <div className='border rounded-lg bg-openingsBg' style={{ borderColor: ' #444444' }}>
+          <div className="p-6  justify-start gap-2 sm:gap-6 mb-4 filter-btn hidden md:flex">
             {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 id='job-opening-btn'
-                className={`rounded-lg text-sm border border-white py-1 px-1  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-transparent text-white'}`}
+                className={`rounded-lg text-sm sm:text-lg   py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
               >
                 {filter}
               </button>
             ))}
           </div>
-            {filteredJobs.map((job) => (
-              <div key={job.id} className=" border-gray-600 apply-container">
+            {filteredJobs.map((job,index) => (
+              <div key={job.id} className="border-gray-600 apply-container bg-openingsBg ">
                 <div
                   className="flex justify-between items-center py-2 px-2 sm:p-4 cursor-pointer"
                   onClick={() => toggleRole(job.id)}
                 >
                   <div>
-                    <h3 className="font-semibold text-md sm:text-lg">{job.title}</h3>
-                    <p className="text-sm sm:text-md text-gray-400">{job.location}</p>
+                    <h3 className="font-semibold text-md sm:text-lg md:text-xl text-largeHeader">{job.title}</h3>
+                    <p className=" text-xs sm:text-md md:text-lg text-sub-head-color">{job.location}</p>
                   </div>
                   {expandedRole === job.id ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
@@ -96,6 +96,9 @@ export default function JobListings() {
             </Modal>
                   </div>
                 )}
+                {index < filteredJobs.length - 1 && (
+      <hr className="border-gray-500  mx-2"  />
+    )}
               </div>
             ))}
           </div>

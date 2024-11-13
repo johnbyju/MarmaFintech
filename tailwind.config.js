@@ -24,7 +24,9 @@ export default {
           'missionGray':'#515050',
           'productGray':'#575353',
           'officalPosition': '#C9C7C782',
-          'largeHeader':'#EAEAEA'
+          'largeHeader':'#EAEAEA',
+          'openingsBg':'#161616D9',
+          'jobFilter':'#303030'
       },
     },
   },

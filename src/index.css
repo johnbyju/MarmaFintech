@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=PP+Neue+Montreal:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'PP Neue Montreal', sans-serif;
+}
 
 html {
     scroll-behavior: smooth;
@@ -20,6 +25,6 @@ html {
     font-style: italic;
 } */
 
-*{
+/* *{
     font-family: 'Neue Montreal',sans-serif;
-}
+} */
