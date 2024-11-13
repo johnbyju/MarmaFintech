@@ -43,7 +43,6 @@ export default function JobListings() {
           <p className="text-sm sm:text-base pb-10 pt-8 sm:cols-4 opening-description text-sub-head-color">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
-    
         </div>
       </div>
 
@@ -97,7 +96,7 @@ export default function JobListings() {
                   </div>
                 )}
                 {index < filteredJobs.length - 1 && (
-      <hr className="border-gray-500  mx-2"  />
+      <hr className="  mx-2" style={{borderColor:'#363535'}}  />
     )}
               </div>
             ))}

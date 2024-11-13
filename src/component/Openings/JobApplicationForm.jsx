@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Openings.css';
+import { X } from 'lucide-react';
 
 export default function JobApplicationForm(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -135,7 +136,7 @@ export default function JobApplicationForm(props) {
             onClick={handleClose}
             className="absolute right-4 top-4 text-white hover:text-white"
           >
-            Close
+            <X/>
           </button>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Apply for Jobs</h2>
           <form onSubmit={handleSubmit} className="space-y-6">

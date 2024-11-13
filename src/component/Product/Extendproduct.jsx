@@ -23,7 +23,7 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           <div className="card " style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <h3 className="inline-block text-xl sm:text-3xl text-headerWhite text-a">Product <span className="text-headerLaseWhite">like these...</span></h3>
+            <h3 className="inline-block text-xl sm:text-3xl  text-a text-headerLaseWhite">Product like <span className=" text-white">these...</span></h3>
           </div>
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;

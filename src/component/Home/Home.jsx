@@ -43,7 +43,6 @@ const Home = () => {
     <section className="home-section min-h-screen">
       {/* <Menu/> */}
       <div className='spline-linear-bg'>
-
      
       <Spline
   style={{
@@ -52,7 +51,13 @@ const Home = () => {
   }}
   id='spline-component'
   scene="/energy_cube.spline"
-/>
+/> 
+ {/* <iframe
+          src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
+          width="1000px"
+          height="1500px"
+          style={{ filter :'brightness(0.8)' }}
+        ></iframe> */}
 </div>
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>
