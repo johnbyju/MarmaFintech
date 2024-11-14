@@ -16,14 +16,14 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-85%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-black">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           <div className="card " style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <p className="inline-block text-xl sm:text-3xl  text-a text-headerLaseWhite" style={{fontSize:'26px'}}>Product like <span className=" text-white">these...</span></p>
+            <p className="inline-block font-normal text-xl sm:text-3xl text-headerLaseWhite">Product like <span className="text-white">these...</span></p>
           </div>
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;

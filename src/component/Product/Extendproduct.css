@@ -141,7 +141,7 @@
     }
 
     .product-card-data{
-      padding: 20px !important;
+      padding: 35px !important;
     }
     .title-num {
       font-size: 2.5rem;
@@ -172,12 +172,19 @@
     .product-description {
       font-size: 0.9rem;
     }
+    .product-card-data{
+      padding: 30px !important;
+    }
   }
   
   @media (max-width:660px) {
     .card{
       height: 350px;
       width: 450px;
+    }
+
+    .product-card-data{
+      padding: 28px !important;
     }
   }
   
@@ -196,26 +203,32 @@
     .product-description {
       font-size: 0.8rem;
     }
+    .product-card-data{
+      padding: 25px !important;
+    }
   }
   
   /* For screens 420px and below */
   @media (max-width: 420px) {
    
    .card {
-      width: 300px !important ;
-      height: 360px !important;
+      width: 280px !important ;
+      height: 380px !important;
     
     } 
     .title-num {
       font-size: 1.2rem;
     }
     .product-title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
     .product-description {
       font-size: 0.7rem;
     } 
     .product-card-data{
-      gap: 5px ;
+      gap: 10px ;
+    }
+    .product-card-data{
+      padding: 20px !important;
     }
   }
