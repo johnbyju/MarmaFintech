@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Menu.css';
 
 
@@ -8,13 +8,20 @@ export default function Menu() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const clickOutside =useRef(null)
 
-  const handleClickAway =()=>{
-    setIsOpen(false);
+  const handleClickAway =(e)=>{
+     if(!clickOutside.current.contains(e.target)){
+        console.log('clicked outside');
+     }
+     else{
+      console.log('clicked inside');
+     }
   }
 
   // Handle scroll lock on menu open
   useEffect(() => {
+    document.addEventListener('click',handleClickAway,true)
     if (isOpen) {
       document.body.classList.add('no-scroll');
     } else {
@@ -29,6 +36,7 @@ export default function Menu() {
         onClick={toggleMenu}
         className={`hamburger-button ${isOpen ? 'open':''}`}
         aria-label="Toggle menu"
+        ref={clickOutside}
       >
         <span></span>
         <span></span>
@@ -36,7 +44,7 @@ export default function Menu() {
 
       {isOpen && (
           <div className="menu-overlay">
-            <nav className="menu-content">
+            <nav className="menu-content" ref={clickOutside}>
               <ul>
                 <li><a href="#mission" onClick={toggleMenu}>Mission</a></li>
                 <li><a href="#products" onClick={toggleMenu}>Products</a></li>
