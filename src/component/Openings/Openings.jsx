@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronDown, Plus, X } from 'lucide-react';
 import './Openings.css';
 import JobApplicationForm from './JobApplicationForm';
@@ -26,6 +26,16 @@ export default function JobListings() {
     ? jobListings
     : jobListings.filter(job => job.category === activeFilter);
     
+    useEffect ( ()=>{
+      if(isModalOpen){
+        document.body.classList.add('no-scroll');
+      }
+      else{
+        document.body.classList.remove('no-scroll')
+      }
+
+      return ()=>document.body.classList.remove('no-scroll')
+    },[isModalOpen])
 
   return (
     <div className="job-listings bg-black text-white mt-20 sm:py-6 px-4 md:p-8 font-sans">
