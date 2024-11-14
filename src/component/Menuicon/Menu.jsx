@@ -29,7 +29,6 @@ export default function Menu() {
       </button>
 
       {isOpen && (
-        <ClickAwayListener onClickAway={() => setIsOpen(false)}>
           <div className="menu-overlay">
             <nav className="menu-content">
               <ul>
@@ -62,7 +61,7 @@ export default function Menu() {
               </div>
             </nav>
           </div>
-        </ClickAwayListener>
+        
       )}
     </div>
   );
