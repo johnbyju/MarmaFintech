@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import { ClickAwayListener } from '@mui/material';
+
+
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+
+  const handleClickAway =()=>{
+    setIsOpen(false);
+  }
 
   // Handle scroll lock on menu open
   useEffect(() => {
@@ -21,7 +27,7 @@ export default function Menu() {
     <div className="hamburger-menu">
       <button
         onClick={toggleMenu}
-        className={`hamburger-button ${isOpen ? 'open' : ''}`}
+        className={`hamburger-button ${isOpen ? 'open':''}`}
         aria-label="Toggle menu"
       >
         <span></span>
@@ -63,6 +69,7 @@ export default function Menu() {
           </div>
         
       )}
+  
     </div>
   );
 }

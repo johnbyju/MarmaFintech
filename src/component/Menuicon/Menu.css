@@ -52,16 +52,15 @@
   top: 100px;
   right: 80px;
   bottom: 180px;
-  width: 250px;
-  height: 350px;
+  width: 240px;
+  height: 340px;
   border-radius: 30px;
   background-color: #b3b2b2;
   color: #0000;
-  padding: 20px 0px 15px 10px;
+  padding: 23px 0px 15px 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .menu-content ul {
@@ -82,14 +81,11 @@
 }
 
 
-.menu-content .contact-us {
-  font-weight: 600;
-}
+
 
 .social-icons {
   display: flex;
-  gap: 50px;
-
+  gap: 46px;
 }
 
 .social-icons a {
