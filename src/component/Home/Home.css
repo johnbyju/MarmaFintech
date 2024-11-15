@@ -51,6 +51,16 @@
 
 /* Default canvas styling for larger screens */
 
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+
+  #logo-wrapper{
+    /* height: 350px; */
+    width: 500px !important;
+  }
+
+}
+
+
 
 /* Tablet */
 

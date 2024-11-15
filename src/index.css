@@ -3,20 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+ @font-face {
+    font-family: 'Neue Montreal';
+    src: url('/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+} 
+
+
 body {
-  font-family: 'PP Neue Montreal', sans-serif;
+  font-family: 'PP Neue Montreal', sans-serif !important;
 }
 
 html {
     scroll-behavior: smooth;
   }
   
-@font-face {
-    font-family: 'Neue Montreal';
-    src: url('/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
 
 /* @font-face {
     font-family: 'Neue Montreal';

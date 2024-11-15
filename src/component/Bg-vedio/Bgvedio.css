@@ -63,7 +63,8 @@ justify-content: center;
 
 @media (max-width:2700px){
   .content p{
-    font-size: 32px;
+    font-size: 38px;
+  font-weight: 400; 
 
   }
   .content{
