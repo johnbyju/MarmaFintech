@@ -137,8 +137,8 @@
   @media (min-width:1440px) {
 
     .card {
-      width: 900px;
-      height: 700px;
+      width: 900px !important;
+      height: 700px !important;
     }
     .product-card-data{
       padding:80px;
@@ -202,8 +202,8 @@
   /* For screens 468px and below */
   @media (max-width: 468px) {
     .card {
-      width: 300px;
-      height: 350px;
+      width: 340px;
+      height: 430px;
     }
     .title-num {
       font-size: 1.5rem;
@@ -223,8 +223,8 @@
   @media (max-width: 420px) {
    
    .card {
-      width: 280px !important ;
-      height: 380px !important;
+      width: 300px !important ;
+      height: 410px !important;
     
     } 
     .title-num {
@@ -240,6 +240,6 @@
       gap: 10px ;
     }
     .product-card-data{
-      padding: 20px !important;
+      padding: 18px !important;
     }
   }

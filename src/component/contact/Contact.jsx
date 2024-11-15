@@ -17,21 +17,21 @@ export default function ContactSection() {
                 { icon: FaXTwitter, name: 'Twitter', handle: '@Marma' },
                 { icon: FaDiscord, name: 'Discord', handle: '@Marma' },
               ].map((social, index) => (
-                <div key={index} className=" py-3 px-2 rounded-lg flex flex-col items-start relative contact-social">
-                   <span style={{position:'absolute',top:'0',right:'26px'}}><ArrowUpRight className='text-sm absolute arrow icon'/></span>
+                <div key={index} className=" py-3 px-3 lg:py-4 lg:px-3 rounded-lg flex flex-col items-start relative contact-social">
+                   <span style={{position:'absolute',top:'0',right:'26px'}}><ArrowUpRight className='text-sm absolute'/></span>
                   <div className='flex gap-20 md:gap-4 lg:gap-12 relative social-handle px-2  pt-2 justify-center align-middle rounded-md'>
-                    <social.icon className="text-2xl mb-2 " />
+                    <social.icon className="text-2xl mb-2 lg:text-3xl" />
                    
                   </div>
-                  <div className="text-sm pt-2">{social.name}</div>
-                  <div className="text-xs text-gray-400">{social.handle}</div>
+                  <div className="text-base md:text-md lg:text-lg pt-2">{social.name}</div>
+                  <div className="text-xs md:text-sm lg:text-md text-gray-400">{social.handle}</div>
                 </div>
               ))}
             </div>
 
             <div className="  grid grid-cols-2 gap-4  lg:grid-cols-3 sm:grid-cols-2 ">
               {/* Email Section */}
-              <div className='flex flex-col '>
+              <div className='flex flex-col gap-2'>
                 <div className='flex flex-row items-center gap-6'>
                   <div className='contact-icons px-2 py-2 rounded-md'>
                     <FaEnvelope className="text-xl contact-details-icon" />
@@ -41,23 +41,23 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <div>
-                <div className="text-gray-400 text-sm md:text-md">marma@gmail.com</div>
+                <div className="text-gray-400 text-base md:text-md">marma@gmail.com</div>
                 </div>
               </div>
-              <div className='flex flex-col'>
+              <div className='flex flex-col gap-2'>
                 <div className='flex flex-row items-center gap-6 '>
                   <div className='contact-icons px-1.5 py-1.5 rounded-md'>
-                  <Phone className="text-xl contact-details-icon text-white " />
+                  <Phone className="text-xl contact-details-icon text-white"/>
                   </div>
                   <div className=''>
                   <span className="font-semibold text-white text-sm md:text-lg">Phone</span>
                   </div>
                 </div>
                 <div className=''>
-                <div className="text-gray-400 text-sm md:text-md">marma@gmail.com</div>
+                <div className="text-gray-400 text-base md:text-lg">marma@gmail.com</div>
                 </div>
               </div>
-              <div className='flex flex-col'>
+              <div className='flex flex-col gap-1'>
                 <div className='flex flex-row items-center mt-3 sm:mt-0 gap-6'>
                   <div className='contact-icons px-2 py-2 rounded-md'>
                   <FaMapMarkerAlt className="text-xl contact-details-icon text-white"/>
@@ -67,7 +67,7 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <div className='text-start mt-2'>
-                <div className="text-gray-400 text-sm md:text-md">Shri Parvathy Tech Park,R.S. Puram, Coimbatore - 641001</div>
+                <div className="text-gray-400 text-base md:text-lg">Shri Parvathy Tech Park,R.S. Puram, Coimbatore - 641001</div>
                 </div>
               </div>             
             </div>
