@@ -38,7 +38,7 @@ export default function JobListings() {
     },[isModalOpen])
 
   return (
-    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-4 md:p-8 font-sans">
+    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-12 md:px-24 font-sans">
       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
         <div className='flex felx-row justify-between gap-10 job-opening-top pt-3'>
           <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br/>TEAM</h1>

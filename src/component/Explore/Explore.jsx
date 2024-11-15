@@ -4,7 +4,7 @@ import './Explore.css'
 
 
 const EventCard = ({ event }) => (
-  <div className="md:grid-cols-12 p-5 flex flex-row align-middle justify-center min-h-30 sm:flex-row gap-2 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
+  <div className="md:grid-cols-12 py-5 flex flex-row align-middle justify-center min-h-30 sm:flex-row gap-2 items-stretch space-y-0 sm:space-y-0 sm:space-x-0" style={{gap:'20px'}}>
     <div className=" pt-2 rounded-lg flex-shrink-0   md:cols-span-8">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVuR0yQGpIwG_ZtdUeR-ajniNKxpFbK5lUyw&s" alt={`${event.title}-image`} className='event-image' />
     </div>
@@ -65,7 +65,7 @@ export default function ExploreLatest() {
   ];
 
   return (
-    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-4 md:p-8" id='event'>
+    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-4 sm:px-12 md:px-24" id='event'>
       <div className="">
         <div className="flex flex-col sm:flex-row sm:items-start mb-8 space-y-4 sm:space-y-0 sm:space-x-8 jb:gap-40">
           <h2 className=" text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 text-largeHeader">
