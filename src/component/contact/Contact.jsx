@@ -6,7 +6,7 @@ import { ArrowUpRight, Phone } from 'lucide-react';
 export default function ContactSection() {
   return (
 
-    <div className="bg-black text-white p-4 md:p-8 lg:p-12  m-4 rounded-lg" id='contact'>
+    <div className="bg-black text-white p-4 md:px-10 lg:px-20  mr-5 rounded-lg" id='contact'>
       <div className="pb-3">
         <div className="grid grid-cols-1 md:grid-cols-[60%,40%] md:gap-4">
           <div className="space-y-8 p-5">

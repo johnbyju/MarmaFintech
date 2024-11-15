@@ -36,13 +36,13 @@ const Team = () => {
 
   return (
     < >
-      <div className='px-4' id='team'>
-        <div className="mobile-view px-4">
+      <div className='' id='team'>
+        <div className="mobile-view px-8">
           <p className='text-headerLaseWhite text-xl sm:text-3xl'>We are a team of </p>
           <p className='text-headerWhite text-xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>
         </div>
         <div className='team-wrapper min-h-screen'>
-          <div className="team-list-container md:px-20 lg:px-20">
+          <div className="team-list-container md:px-8 lg:px-20">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite text-xl sm:text-3xl'>We are a team of </p>
               <p className='text-headerWhite text-xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>

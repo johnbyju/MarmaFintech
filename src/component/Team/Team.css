@@ -256,16 +256,15 @@
   }
 
   .carousel {
-    padding   : 20px 20px;
-    overflow  : hidden;
+    padding: 20px 20px;
+    overflow: hidden;
     overflow-x: hidden;
-    display   : flex;
-    z-index   : 1;
-    width     : 85vw;
-    gap       : 20px;
+    display: flex;
+    z-index: 1;
+    width: 103vw;
+    gap: 20px;
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 99%);
-
-  }
+}
 
   .web-view {
     display: none !important;
@@ -304,5 +303,5 @@
 
 @media (max-width: 375px) {}
 
-/* Very small mobile devices (max-width: 320px) */
+
 @media (max-width: 320px) {}

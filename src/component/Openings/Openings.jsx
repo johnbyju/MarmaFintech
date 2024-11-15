@@ -25,23 +25,23 @@ export default function JobListings() {
   const filteredJobs = activeFilter === 'All'
     ? jobListings
     : jobListings.filter(job => job.category === activeFilter);
-    
-    useEffect ( ()=>{
-      if(isModalOpen){
-        document.body.classList.add('no-scroll');
-      }
-      else{
-        document.body.classList.remove('no-scroll')
-      }
 
-      return ()=>document.body.classList.remove('no-scroll')
-    },[isModalOpen])
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.classList.add('no-scroll');
+    }
+    else {
+      document.body.classList.remove('no-scroll')
+    }
+
+    return () => document.body.classList.remove('no-scroll')
+  }, [isModalOpen])
 
   return (
-    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-12 md:px-24 font-sans">
-      <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
-        <div className='flex felx-row justify-between gap-10 job-opening-top pt-3'>
-          <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br/>TEAM</h1>
+    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 lg:px-24 font-sans">
+       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
+        <div className='flex felx-row justify-between gap-15 job-opening-top pt-3'>
+          <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1>
           <div className='inline-block jb:hidden'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
@@ -49,12 +49,14 @@ export default function JobListings() {
             </div>
           </div>
         </div>
-        <div>
-          <p className="text-sm sm:text-base pb-10 pt-6   sm:cols-4 opening-description text-sub-head-color">
+        <div className=''>
+          <p className="text-base sm:text-md md:text-xl pb-10 pt-6 md:pt-2   sm:cols-4 opening-description text-sub-head-color custom-padding">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
         </div>
-      </div>
+      </div> 
+
+      
 
 
       {openRoles && (
@@ -72,19 +74,19 @@ export default function JobListings() {
             ))}
           </div>
           <div className='border rounded-lg bg-openingsBg' style={{ borderColor: ' #444444' }}>
-          <div className="p-6  justify-start gap-2 sm:gap-6 mb-4 filter-btn hidden md:flex">
-            {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                id='job-opening-btn'
-                className={`rounded-lg text-sm sm:text-lg   py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-            {filteredJobs.map((job,index) => (
+            <div className="p-6  justify-start gap-2 sm:gap-6 mb-4 filter-btn hidden md:flex">
+              {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  id='job-opening-btn'
+                  className={`rounded-lg text-sm sm:text-lg   py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+            {filteredJobs.map((job, index) => (
               <div key={job.id} className="border-gray-600 apply-container bg-openingsBg ">
                 <div
                   className="flex justify-between items-center py-2 px-2 sm:p-4 cursor-pointer"
@@ -101,13 +103,13 @@ export default function JobListings() {
                     <p className="text-sm sm:text-md leading-relaxed">{job.description}</p>
                     <button className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
-                <JobApplicationForm  Job={job.title} onClose={closeModal}/>
-            </Modal>
+                      <JobApplicationForm Job={job.title} onClose={closeModal} />
+                    </Modal>
                   </div>
                 )}
                 {index < filteredJobs.length - 1 && (
-      <hr className="  mx-2" style={{borderColor:'#363535'}}  />
-    )}
+                  <hr className="  mx-2" style={{ borderColor: '#363535' }} />
+                )}
               </div>
             ))}
           </div>
