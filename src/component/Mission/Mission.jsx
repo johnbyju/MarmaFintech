@@ -22,7 +22,7 @@ const Mission = () => {
   return (
     <div className='min-h-screen min-w-screen'>
       <div className='mission-title'>
-        <h3>OUR MISSION</h3>
+        <h3 className="text-2xl">OUR MISSION</h3>
       </div>
       <div className="mission-wrapper">
         <div className='mission-sections'>
