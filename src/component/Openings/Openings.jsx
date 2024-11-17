@@ -38,7 +38,7 @@ export default function JobListings() {
   }, [isModalOpen])
 
   return (
-    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 md:px-24 lg:px-20  font-sans">
+    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 md:px-20 lg:px-24 xl:px-32  font-sans">
       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
         <div className='flex felx-row justify-between gap-15 job-opening-top pt-3'>
           {/* <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1> */}
@@ -90,19 +90,27 @@ export default function JobListings() {
             {filteredJobs.map((job, index) => (
               <div key={job.id} className="border-gray-600 apply-container rounded-3xl lg:px-0  sm:px-0 sm:py-0 px-3 py-3">
                 <div
-                  className="flex sm:justify-between items-center  py-2 px-2 sm:p-4 lg:px-8 lg:py-10 cursor-pointer"
+                  className="flex flex-row sm:flex-row justify-between  py-2 px-2 sm:p-4 lg:px-8 lg:py-10 cursor-pointer"
                   onClick={() => toggleRole(job.id)}
                 >
-                  <div className='sm:flex-1 '>
+                  <div className='flex flex-col sm:hidden'>
                     <h3 className="font-semibold text-md sm:text-md md:text-lg text-largeHeader">{job.title}</h3>
+                    <p className="text-xs sm:text-base md:text-md text-sub-head-color">{job.location}</p>
                   </div>
-                  <div className='sm:flex-1'>
-                    <p className=" text-xs sm:text-md md:text-lg text-sub-head-color">{job.location}</p>
+             
+                    <div className='sm:flex-1 hidden sm:block'>
+                      <h3 className="font-semibold text-md sm:text-md md:text-lg text-largeHeader">{job.title}</h3>
+                    </div>
+                    <div className='sm:flex-1 hidden sm:block'>
+                      <p className=" text-xs sm:text-base md:text-md text-sub-head-color">{job.location}</p>
+                    </div>
+                 
+                  <div>
+                    {expandedRole === job.id ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
-                  {expandedRole === job.id ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
                 {expandedRole === job.id && (
-                  <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor:'161616E3'}}>
+                  <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
                     <p className="text-sm sm:text-md leading-relaxed">{job.description}</p>
                     <button className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                     <Modal isOpen={isModalOpen} onClose={closeModal}>
