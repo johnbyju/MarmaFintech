@@ -118,6 +118,13 @@ justify-content: center;
   
   .content p {
     font-size: 24px;
+    
 }
   
+}
+
+@media (max-width:420px){
+  .content p{
+    font-size: 23px;
+  }
 }

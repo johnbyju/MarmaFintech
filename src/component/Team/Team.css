@@ -14,8 +14,6 @@
 }
 
 
-
-
 .main-wrapper {
   border       : 1px solid #3d3d3d;
   border-radius: 21px;
@@ -57,6 +55,9 @@
     transform    : scale(1.1);
   }
 
+  .text-overlay p{
+    font-size: 34px;
+  }
 
 
   .group {
@@ -87,8 +88,9 @@
   }
 
   .profile-pic {
-    height       : 100px;
-    width        : 100px;
+    height       : 109px;
+    width        : 109px;
+    /* padding: 20px 0px 0px 10px; */
     border-radius: 15px;
     filter       : grayscale(1);
   }
@@ -103,6 +105,10 @@
     display        : flex;
     justify-content: space-between;
   }
+}
+
+.card-content{
+  padding: 20px;
 }
 
 .carousel {
@@ -147,14 +153,11 @@
 
 @media (min-width: 750px) {
 
-  .card-content {
-    height: 100px;
-  }
 
-  .profile-pic {
-    height: 50px !important;
-    width : 50px !important;
-  }
+  /* .profile-pic {
+    height: 109px !important;
+    width : 109px !important;
+  } */
 
   .team-card {
     height : 150px;
@@ -165,25 +168,26 @@
   .card-content {
     display        : flex;
     flex-direction : column;
-    width          : 100%;
+    /* width          : 100%;
     height         : 100%;
     max-width      : 100%;
-    max-height     : 100%;
-    margin         : 0px;
-    padding        : 1px;
+    max-height     : 100%; */
+    padding        : -1px;
+    gap: 20px;
     list-style-type: none;
     opacity        : 1;
     overflow       : hidden;
+    /* gap: 40px; */
   }
 
 
   .info {
     h3 {
-      font-size: 18px !important;
+      font-size: 24px !important;
     }
 
     p {
-      font-size: 12px !important;
+      font-size: 16px !important;
     }
 
     .linkedin-icon {
@@ -196,6 +200,11 @@
       flex-direction : column;
       justify-content: center;
     }
+
+  }
+  
+  .official-position{
+    font-size: 14px ;
   }
 
   .mobile-view {
@@ -241,7 +250,7 @@
     }
 
     p {
-      font-size: 12px !important;
+      font-size: 18px !important;
     }
 
     .linkedin-icon {
@@ -296,7 +305,7 @@
   }
 
   .info p {
-    font-size: 0.85em;
+    font-size: 14px;
   }
 
 }

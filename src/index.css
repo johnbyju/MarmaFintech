@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=PP+Neue+Montreal:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 
- @font-face {
-    font-family: 'Neue Montreal';
-    src: url('/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-} 
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/public/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
+  font-weight: bold;
+}
 
 
 body {
-  font-family: 'PP Neue Montreal', sans-serif !important;
+  font-family: 'PP Neue Montreal';
 }
 
 html {
@@ -32,3 +30,12 @@ html {
 /* *{
     font-family: 'Neue Montreal',sans-serif;
 } */
+
+/* body {
+  overflow-y: scroll;
+  scrollbar-width: none; 
+} */
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}

@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('/public/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
+    font-weight: bold;
+}
+
 
 .job-listings{
     min-height: 70vh;
@@ -34,3 +40,11 @@
         justify-content: space-evenly !important;
     } */
 }  
+
+
+@media (min-width:1024px){
+    .openings-header{
+        font-size: 60px;
+        font-family: PP Neue Montreal;
+    }
+}

@@ -61,7 +61,7 @@ const Card = ({ card }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+        className="absolute inset-0 z-0 transition-transform duration-300 "
       ></div>
       <div className="absolute inset-0 z-10 product-card-data">
         <h2 className="title-num">{card.id}</h2>

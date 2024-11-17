@@ -38,10 +38,11 @@ export default function JobListings() {
   }, [isModalOpen])
 
   return (
-    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 lg:px-24 font-sans">
-       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
+    <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 lg:px-28 xl:px-32 font-sans">
+      <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
         <div className='flex felx-row justify-between gap-15 job-opening-top pt-3'>
-          <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1>
+          {/* <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1> */}
+          <h1 className="openings-header font-bold text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1>
           <div className='inline-block jb:hidden'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
@@ -54,13 +55,13 @@ export default function JobListings() {
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
         </div>
-      </div> 
+      </div>
 
-      
+
 
 
       {openRoles && (
-        <div className=''>
+        <div className='rounded-3xl'>
           <div className="flex justify-center px-4  md:hidden gap-2 sm:gap-6 mb-4 filter-btn">
             {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
               <button
@@ -73,27 +74,29 @@ export default function JobListings() {
               </button>
             ))}
           </div>
-          <div className='border rounded-lg bg-openingsBg' style={{ borderColor: ' #444444' }}>
-            <div className="p-6  justify-start gap-2 sm:gap-6 mb-4 filter-btn hidden md:flex">
+          <div className='border rounded-3xl bg-openingsBg' style={{ borderColor: ' #444444' }}>
+            <div className="px-3 pt-3  justify-start gap-0 sm:gap-2 mb-4 filter-btn hidden md:flex">
               {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   id='job-opening-btn'
-                  className={`rounded-lg text-sm sm:text-lg   py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                  className={` rounded-2xl  lg:px-10 text-sm sm:text-md   py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
                 >
                   {filter}
                 </button>
               ))}
             </div>
             {filteredJobs.map((job, index) => (
-              <div key={job.id} className="border-gray-600 apply-container bg-openingsBg ">
+              <div key={job.id} className="border-gray-600 apply-container rounded-3xl ">
                 <div
-                  className="flex justify-between items-center py-2 px-2 sm:p-4 cursor-pointer"
+                  className="flex justify-between items-center py-2 px-2 sm:p-4 xl:px-12 xl:py-12 cursor-pointer"
                   onClick={() => toggleRole(job.id)}
                 >
-                  <div>
-                    <h3 className="font-semibold text-md sm:text-lg md:text-xl text-largeHeader">{job.title}</h3>
+                  <div className='flex-1'>
+                    <h3 className="font-semibold text-md sm:text-md md:text-lg text-largeHeader">{job.title}</h3>
+                  </div>
+                  <div className='flex-1'>
                     <p className=" text-xs sm:text-md md:text-lg text-sub-head-color">{job.location}</p>
                   </div>
                   {expandedRole === job.id ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}

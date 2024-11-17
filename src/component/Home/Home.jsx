@@ -40,7 +40,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="home-section min-h-screen">
+    <section className="home-section ">
       {/* <Menu/> */}
       <div className='spline-linear-bg'>
         <div id='spline-overlay'></div>

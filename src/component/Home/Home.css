@@ -18,6 +18,7 @@
 .home-section::-webkit-scrollbar {
   display: none;
 }
+
 #logo-wrapper {
   height: 80px;
   width: 400px;
