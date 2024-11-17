@@ -44,19 +44,19 @@ const Home = () => {
       {/* <Menu/> */}
       <div className='spline-linear-bg'>
         <div id='spline-overlay'></div>
-        {/* <Spline
+        <Spline
           style={{
             overflow: 'auto',
           }}
           id='spline-component'
           scene="/energy_cube.spline"
-        /> */}
-        <iframe
+        />
+        {/* <iframe
           src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
           width="1000px"
           height="1500px"
           id='spline-component'
-        ></iframe>
+        ></iframe> */}
       </div>
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>

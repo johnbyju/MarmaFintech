@@ -1,32 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Menu.css';
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Ref for the entire component to detect clicks outside
-  const clickOutside = useRef(null);
-
-  const handleClickAway = (e) => {
-    if (isOpen && clickOutside.current && !clickOutside.current.contains(e.target)) {
-      setIsOpen(false);
-      console.log('clicked outside');
-    } else {
-      console.log('clicked inside');
-    }
-  };
+  const menuRef = useRef()
 
   useEffect(() => {
-    document.addEventListener('click', handleClickAway, true);
-    return () => {
-      document.removeEventListener('click', handleClickAway, true);
+    let handler =(e)=>{
+      if(!menuRef.current.contains(e.target)){
+        setIsOpen(false)
+        console.log(menuRef.current);
+        
+      }
     };
-  }, [isOpen]);
+    document.addEventListener('mousedown',handler);
+    return()=>{
+      document.removeEventListener('mousedown',handler);
+    }
+  })
+
+
 
   return (
-    <div className="hamburger-menu" ref={clickOutside}>
+    <div className="hamburger-menu "  ref={menuRef}>
       <button
         onClick={toggleMenu}
         className={`hamburger-button ${isOpen ? 'open' : ''}`}
@@ -37,7 +37,7 @@ export default function Menu() {
       </button>
 
       {isOpen && (
-        <div className="menu-overlay">
+        
           <nav className="menu-content">
             <ul>
               <li><a href="#mission" onClick={toggleMenu}>Mission</a></li>
@@ -48,9 +48,7 @@ export default function Menu() {
             </ul>
             <div className="social-icons">
               <a href="#" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
+              <FaXTwitter size={24} style={{ width: '24px', height: '24px', stroke: 'currentColor', strokeWidth: '2' }} />
               </a>
               <a href="#" aria-label="LinkedIn">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +66,6 @@ export default function Menu() {
               </a>
             </div>
           </nav>
-        </div>
       )}
     </div>
   );
