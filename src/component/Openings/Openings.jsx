@@ -88,9 +88,9 @@ export default function JobListings() {
               ))}
             </div>
             {filteredJobs.map((job, index) => (
-              <div key={job.id} className="border-gray-600 apply-container rounded-3xl lg:px-0  sm:px-4 sm:py-3 px-3 py-3">
+              <div key={job.id} className="border-gray-600 apply-container rounded-3xl lg:px-0  sm:px-0 sm:py-0 px-3 py-3">
                 <div
-                  className="flex sm:justify-between items-center  py-2 px-2 sm:p-4 xl:px-12 xl:py-12 cursor-pointer"
+                  className="flex sm:justify-between items-center  py-2 px-2 sm:p-4 lg:px-8 lg:py-12 cursor-pointer"
                   onClick={() => toggleRole(job.id)}
                 >
                   <div className='sm:flex-1 '>
@@ -110,9 +110,9 @@ export default function JobListings() {
                     </Modal>
                   </div>
                 )}
-                {index < filteredJobs.length - 1 && (
+                {/* {index < filteredJobs.length - 1 && (
                   <hr className="mx-2" style={{ borderColor: '#363535' }} />
-                )}
+                )} */}
               </div>
             ))}
           </div>
