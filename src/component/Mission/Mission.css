@@ -78,11 +78,19 @@
 
 
 /*------MEDIA QUERY------*/
-@media screen and (min-width: 1400px) and (max-width: 1700px) {
+@media (min-width:1024px){
 
   .text-wrapper p {
     font-size: 38px;
   }
+}
+
+
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+  .text-wrapper p {
+    font-size: 42px;
+  }
+  
 
   .mission-title {
     padding-top: 69px;

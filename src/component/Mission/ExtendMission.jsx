@@ -10,7 +10,7 @@ const ExtendMission = () => {
   return (
     <div className='' style={{width:"100%"}} id='mission'>
       <div className='mission-title'>
-        <h3 className=' text-2xl xsm:text-2xl jb:text-4xl'>OUR MISSION</h3>
+        <h3 className=' text-2xl xsm:text-2xl jb:text-4xl lg:text-5xl'>OUR MISSION</h3>
       </div>
       <div className="mission-wrapper">
         <div className='mission-sections'>

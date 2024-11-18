@@ -65,7 +65,7 @@ export default function ExploreLatest() {
   ];
 
   return (
-    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 sm:py-6 px-8 md:px-8 lg:px-24" id='event'>
+    <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 px-10 sm:py-6 sm:px-14 md:px-20 lg:px-24 xl:px-32" id='event'>
       <div className="">
         <div className="flex flex-col md:flex-row sm:items-start mb-8 space-y-4 sm:space-y-0  md:gap-36">
           {/* <h2 className=" text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 text-largeHeader">
@@ -74,7 +74,7 @@ export default function ExploreLatest() {
           <h2 className="openings-header sm:w-1/3 h-1/3 text-largeHeader">
             EXPLORE THE&nbsp;&nbsp;LATEST
           </h2>
-          <p className="text-base sm:text-md md:text-xl  mt-4 sm:mt-0    text-sub-head-color custom-padding">
+          <p className="  mt-4 sm:mt-0    text-sub-head-color custom-padding">
             MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>

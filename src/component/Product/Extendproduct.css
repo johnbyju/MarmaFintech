@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/public/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
+  /* font-weight: bold; */
+}
 
 
   .container {
@@ -47,7 +52,7 @@
   
  
   .title-num {
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 100;
     text-align: left;  
   }
@@ -69,13 +74,14 @@
     justify-content : flex-end;
     padding: 20px; 
     gap: 15px;
+    font-family: PP Neue Montreal;
     
   }
 
   .product-title{  
-    font-size: 34px;
+    font-size: 38px;
     text-align: left;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     font-weight: 100;
   }
   
@@ -155,7 +161,7 @@
       padding: 35px !important;
     }
     .title-num {
-      font-size: 2.5rem;
+      font-size: 38px;
     }
     .product-title {
       font-size: 1.8rem;
@@ -175,7 +181,8 @@
       height: 450px;
     }
     .title-num {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      font-weight: 100;
     }
     .product-title {
       font-size: 1.5rem;

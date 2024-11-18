@@ -45,6 +45,41 @@
 @media (min-width:1024px){
     .openings-header{
         font-size: 60px;
+        font-weight: bold;
         font-family: PP Neue Montreal;
+    }
+    .custom-padding{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:768px){
+    .openings-header{
+        font-size: 42px;
+        font-weight: bold;
+        font-family: PP Neue Montreal;
+    }
+}
+
+@media (max-width:420px){
+
+    .openings-header{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: PP Neue Montreal;
+    }
+    .custom-padding{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px){
+    .openings-header{
+        font-size: 28px;
+        font-weight: bold;
+        font-family: PP Neue Montreal;
+    }
+    .custom-padding{
+        font-size: 18px;
     }
 }
