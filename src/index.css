@@ -4,16 +4,8 @@
 
 
 
-@font-face {
-  font-family: 'PP Neue Montreal';
-  src: url('/public/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
-  font-weight: bold;
-}
 
 
-body {
-  font-family: 'PP Neue Montreal';
-}
 
 html {
     scroll-behavior: smooth;
