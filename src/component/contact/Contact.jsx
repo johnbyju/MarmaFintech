@@ -107,7 +107,7 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <hr className="mt-8 md:mt-14 border-0 border-t-2 border-gray-400" />
+      <hr className="mt-8 md:mt-14 border-0 border-t-2 opacity-50 border-gray-400" />
 
       <p className='text-center mt-4 text-headerWhite'>© Marma Fintech 2024</p>
     </div>

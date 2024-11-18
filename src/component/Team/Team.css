@@ -1,40 +1,40 @@
 .team-wrapper {
-  background-color   : black;
-  color              : white;
-  padding            : 0;
-  background-image   : url(/team.png);
-  background-repeat  : no-repeat;
-  background-size    : cover;
+  background-color: black;
+  color: white;
+  padding: 0;
+  background-image: url(/team.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  display            : flex;
-  flex-direction     : column;
-  justify-content    : end;
-  box-shadow         : #3d3d3d;
-  overflow-wrap      : anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-shadow: #3d3d3d;
+  overflow-wrap: anywhere;
 }
 
 
 .main-wrapper {
-  border       : 1px solid #3d3d3d;
+  border: 1px solid #3d3d3d;
   border-radius: 21px;
 }
 
 .team-list-container {
-  display       : flex;
+  display: flex;
   flex-direction: row;
-  width         : 100%;
+  width: 100%;
 
 
   .text-overlay {
-    position       : relative;
-    display        : flex;
-    flex-direction : column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    font-size      : 25px;
-    min-width      : -moz-fit-content;
-    min-width      : fit-content;
+    font-size: 25px;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
     /* padding        : 0 16px; */
-    overflow       : hidden;
+    overflow: hidden;
 
     span {
       color: #fff;
@@ -42,84 +42,84 @@
   }
 
   .text-overlay::before {
-    content      : "";
-    position     : absolute;
-    top          : 0;
-    left         : 0;
-    right        : 0;
-    bottom       : 0;
-    z-index      : -1;
-    background   : linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
-    filter       : blur(15px);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    filter: blur(15px);
     border-radius: 16px;
-    transform    : scale(1.1);
+    transform: scale(1.1);
   }
 
-  .text-overlay p{
+  /* .text-overlay p{
     font-size: 34px;
-  }
+  } */
 
 
   .group {
-    display         : flex;
-    gap             : 20px;
+    display: flex;
+    gap: 20px;
     /* padding-right: 20px; */
-    will-change     : transform;
-    animation       : scrolling 20s linear infinite; 
+    will-change: transform;
+    animation: scrolling 20s linear infinite;
   }
 
-    .team-card {
-      width: 400px;
-      height: 277px;
-      color          : white;
-      border-radius  : 24px;
-      box-shadow     : rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-      font-size      : xx-large;
-      justify-content: center;
-      background     : #2121218f;
-      padding        : 10px;
-    }
+  .team-card {
+    width: 400px;
+    height: 277px;
+    color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    font-size: xx-large;
+    justify-content: center;
+    background: #2121218f;
+    padding: 10px;
+  }
 
-    .profile-pic {
-      height       : 109px;
-      width        : 109px;
-      border-radius: 15px;
-      filter       : grayscale(1);
-    }
-  
+  .profile-pic {
+    height: 109px;
+    width: 109px;
+    border-radius: 15px;
+    filter: grayscale(1);
+  }
+
 
   .slides {
-    display    : flex;
-    gap        : 20px;
+    display: flex;
+    gap: 20px;
     will-change: transform;
-    animation  : scroll 1s linear infinite;
+    animation: scroll 1s linear infinite;
   }
 
-  
+
   .linkedin-icon {
     padding-top: 44px;
-    height     : 89px;
-    width      : 46px;
+    height: 89px;
+    width: 46px;
   }
 
   .info {
-    display        : flex;
+    display: flex;
     justify-content: space-between;
   }
 }
 
-.card-content{
+.card-content {
   padding: 20px;
 }
 
 .carousel {
-  padding   : 20px 20px;
-  overflow  : hidden;
+  padding: 20px 20px;
+  overflow: hidden;
   overflow-x: hidden;
-  display   : flex;
-  z-index   : 1;
+  display: flex;
+  z-index: 1;
   gap: 20px;
-  width     : 70vw;
+  width: 100vw;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -143,13 +143,30 @@
 
 /* FOR THE 4K SCREEN */
 
-@media (max-width: 2560px) {}
+@media (max-width: 2560px) {
+  .text-overlay p {
+    font-size: 42px !important;
+  }
+}
 
 
-@media (max-width: 1440px) {}
+@media (max-width: 1440px) {
+  .text-overlay p {
+    font-size: 42px !important;
+  }
+}
 
 
-@media (max-width: 1024px) {}
+
+@media (max-width: 1024px) {
+  .text-overlay p {
+    font-size: 32px !important;
+  }
+  /* .team-card{
+    height: 200px !important;
+    width: 200px !important;
+  } */
+}
 
 
 @media (min-width: 750px) {
@@ -161,19 +178,19 @@
   } */
 
   .team-card {
-    height : 150px;
-    width  : 100px;
+    height: 150px;
+    width: 100px;
     padding: 10px !important;
   }
 
   .card-content {
-    display        : flex;
-    flex-direction : column;
-    padding        : -1px;
+    display: flex;
+    flex-direction: column;
+    padding: -1px;
     gap: 20px;
     list-style-type: none;
-    opacity        : 1;
-    overflow       : hidden;
+    opacity: 1;
+    overflow: hidden;
   }
 
 
@@ -188,50 +205,63 @@
 
     .linkedin-icon {
       height: auto;
-      width : 30px;
+      width: 30px;
     }
 
     .official-name {
-      display        : flex;
-      flex-direction : column;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
     }
 
   }
-  
-  .official-position{
-    font-size: 14px ;
+
+  .official-position {
+    font-size: 14px;
   }
 
   .mobile-view {
     display: none !important;
   }
+
 }
+
+ @media (max-width:768px){
+  .web-view {
+    display: none !important;
+  }
+} 
+
 
 @media (max-width:750px) {
 
- 
+  .text-overlay p {
+    font-size: 18px !important;
+  }
 
   .profile-pic {
     height: 100px !important;
-    width : 100px !important;
+    width: 100px !important;
   }
 
   .team-card {
-    height : 235px !important;
-    width  : 350px !important;
+    height: 235px !important;
+    width: 350px !important;
   }
 
+
+
   .card-content {
-    display        : flex;
-    flex-direction : column;
-    gap            :10px;
-    margin         : 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px;
     list-style-type: none;
-    opacity        : 1;
-    overflow       : hidden;
+    opacity: 1;
+    overflow: hidden;
   }
-  .linkedin-icon{
+
+  .linkedin-icon {
     padding-bottom: 30px;
   }
 
@@ -247,12 +277,12 @@
 
     .linkedin-icon {
       height: auto;
-      width : 30px;
+      width: 30px;
     }
 
     .official-name {
-      display        : flex;
-      flex-direction : column;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
     }
   }
@@ -266,15 +296,12 @@
     width: 103vw;
     gap: 20px;
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 99%);
-}
-
-  .web-view {
-    display: none !important;
   }
 
+
   .mobile-view {
-    width      : 100%;
-    font-size  : 20px;
+    width: 100%;
+    font-size: 20px;
     line-height: 24px;
     font-weight: 500;
   }
@@ -288,31 +315,33 @@
   .team-card {
     width: 300px !important;
     height: 200px !important;
-    color          : white;
-    border-radius  : 24px;
-    box-shadow     : rgba(0, 0, 0, 10%) 5px 5px 20px 0;
-    font-size      : xx-large;
+    color: white;
+    border-radius: 24px;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    font-size: xx-large;
     justify-content: center;
-    background     : #2121218f;
-    padding        : 0px !important;
+    background: #2121218f;
+    padding: 0px !important;
     display: flex;
-   gap: 10px;
+    gap: 10px;
   }
 
   .profile-pic {
-    height       : 70px !important;
-    width        : 70px !important;
+    height: 70px !important;
+    width: 70px !important;
     border-radius: 15px;
-    filter       : grayscale(1);
+    filter: grayscale(1);
   }
 
-  .card-content{
+  .card-content {
     gap: 10px;
   }
-  .official-name{
+
+  .official-name {
     font-size: 10px !important;
   }
-  .info{
+
+  .info {
     gap: 20px;
   }
 

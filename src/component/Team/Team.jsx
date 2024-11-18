@@ -44,8 +44,8 @@ const Team = () => {
         <div className='team-wrapper min-h-screen'>
           <div className="team-list-container sm:px-14 md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
-              <p className='text-headerLaseWhite text-2xl sm:text-3xl'>We are a team of </p>
-              <p className='text-headerWhite text-2xl sm:text-3xl'><span>thinkers</span> & <span>makers</span>...</p>
+              <p className='text-headerLaseWhite '>We are a team of </p>
+              <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
             </div>
             <div className="carousel">
               <div className="group">

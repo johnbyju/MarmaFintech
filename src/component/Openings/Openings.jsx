@@ -51,7 +51,7 @@ export default function JobListings() {
           </div>
         </div>
         <div className=''>
-          <p className="text-base sm:text-md md:text-xl pb-10 pt-6 md:pt-2   sm:cols-4 opening-description text-sub-head-color custom-padding">
+          <p className=" pb-10 pt-6 md:pt-2   sm:cols-4 opening-description text-sub-head-color custom-padding">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
         </div>
