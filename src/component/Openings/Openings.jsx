@@ -65,7 +65,7 @@ export default function JobListings() {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 id='job-opening-btn'
-                className="rounded-lg text-sm sm:text-md  py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer bg-jobFilter"
+                className={`rounded-lg text-sm sm:text-md  py-1.5 px-2  sm:py-2 sm:px-4  cursor-pointer bg-jobFilter font-ppnue ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
               >
                 {filter}
               </button>
@@ -78,7 +78,7 @@ export default function JobListings() {
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   id='job-opening-btn'
-                  className={` rounded-2xl   lg:px-12 lg:py-6 text-sm sm:text-md   py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                  className={`font-ppnue rounded-2xl   lg:px-12 lg:py-6 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
                 >
                   {filter}
                 </button>

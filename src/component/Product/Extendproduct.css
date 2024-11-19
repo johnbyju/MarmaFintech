@@ -1,8 +1,9 @@
-@font-face {
-  font-family: 'PP Neue Montreal';
-  src: url('/public/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
-  /* font-weight: bold; */
-}
+ /* @font-face {
+  font-family: 'PPnue';
+  src: url('/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
+  
+}  */
+
 
 
 .container {
@@ -52,7 +53,7 @@
 
 
 .title-num {
-  font-size: 34px;
+  font-size: 38px;
   font-weight: 100;
   text-align: left;
 }
@@ -74,15 +75,16 @@
   justify-content: flex-end;
   padding: 20px;
   gap: 15px;
-  font-family: PP Neue Montreal;
+  font-family: PPnue;
 
 }
 
 .product-title {
-  font-size: 38px;
+  font-size: 32px;
   text-align: left;
   letter-spacing: 3px;
   font-weight: 100;
+  
 }
 
 
@@ -143,6 +145,7 @@
 
   .product-title {
     font-size: 65px;
+    font-weight: 100;
   }
 
   .product-description {
@@ -171,6 +174,7 @@
     width: 600px;
     height: 520px;
   }
+  
 
   .product-card-data {
     padding: 35px !important;
@@ -180,9 +184,9 @@
     font-size: 38px;
   }
 
-  .product-title {
+  /* .product-title {
     font-size: 1.8rem;
-  }
+  } */
 
   .product-description {
     font-size: 1rem;
@@ -205,9 +209,9 @@
     font-weight: 100;
   }
 
-  .product-title {
+  /* .product-title {
     font-size: 1.5rem;
-  }
+  } */
 
   .product-description {
     font-size: 0.9rem;
@@ -240,9 +244,9 @@
     font-size: 1.5rem;
   }
 
-  .product-title {
+  /* .product-title {
     font-size: 1.2rem;
-  }
+  } */
 
   .product-description {
     font-size: 0.8rem;
@@ -266,9 +270,9 @@
     font-size: 1.2rem;
   }
 
-  .product-title {
+  /* .product-title {
     font-size: 1.6rem;
-  }
+  } */
 
   .product-description {
     font-size: 0.7rem;

@@ -10,7 +10,9 @@ export default {
         'jb': '781px',
         'xsm': '450px',
         'ise':'400px',
-        "esm":"525px"
+        "esm":"525px",
+        "mi":"420px"
+
       },
       colors :{
           'headerWhite':'#D9CCCC',
@@ -28,6 +30,9 @@ export default {
           'openingsBg':'#161616D9',
           'jobFilter':'#303030'
       },
+      fontFamily:{
+        ppnue :["PP Neue Montreal",'sans-serif'],
+      }
     },
   },
   plugins: [],

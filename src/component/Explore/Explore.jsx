@@ -9,17 +9,17 @@ const EventCard = ({ event }) => (
       <img src="/images/event/event-img.avif" alt={`${event.title}-image`} className='event-image' />
     </div>
     <div className="flex flex-col justify-center gap-7 sm:inline-flex pl-3 md:cols-span-2">
-      <h3 className="text-white font-light  event-title-class" style={{ fontSize: '24px', fontWeight: '500', lineHeight: '29px' }}>{event.title}</h3>
-      <p className="text-gray-400 text-md md:text-md  hidden jb:block event-description max-w-[calc(100%-30px)]" >{event.description}</p>
+      <h3 className="text-white font-light  event-title-class" style={{  fontWeight: '500', lineHeight: '29px' }}>{event.title}</h3>
+      <p className="text-gray-400 text-md md:text-md  hidden jb:block event-description max-w-[calc(100%-50px)]" >{event.description}</p>
       <div className="flex  flex-col-reverse  jb:hidden">
 
         {/* <span className="text-gray-400 inline-block mt-2 flex-row text-xs eventdate" style={{display:'list-item',marginLeft:'25px'}}>{event.date}</span> */}
-        <span className=" inline-block mt-4 flex-row text-xs eventdate" style={{ display: 'list-item', marginLeft: '15px' }}>{event.date}</span>
+        <span className=" inline-block mt-4 flex-row  eventdate" style={{ display: 'list-item', marginLeft: '15px' }}>{event.date}</span>
 
-        <div className='flex justify-start '>
+        <div className='flex justify-start'>
           <a
             href=""
-            className="register-btn py-0.5 px-3"
+            className="register-btn py-0.5"
           >
             Register
             <ArrowUpRight className='' />
@@ -74,7 +74,7 @@ export default function ExploreLatest() {
           <h2 className="openings-header sm:w-1/3 h-1/3 text-largeHeader">
             EXPLORE&nbsp;&nbsp;THE<br/>LATEST
           </h2>
-          <p className="text-base md:text-md  mt-40 sm:mt-0    text-sub-head-color custom-padding">
+          <p className="text-base md:text-md lg:text-xl mt-40 sm:mt-0    text-sub-head-color custom-padding">
             MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>
