@@ -85,7 +85,7 @@ export default function JobListings() {
             </div>
             <div className='p-2'>
               {filteredJobs.map((job, index) => (
-                <div key={job.id} className="border-gray-600 apply-container  rounded-3xl lg:px-0  sm:px-0 sm:py-0 px-3 p-3">
+                <div key={job.id} className="border-gray-600 apply-container py-3 rounded-3xl lg:px-0  sm:px-0 sm:py-5 px-3 p-3">
                   <div
                     className="flex flex-row sm:flex-row justify-between  py-1 px-2 sm:p-4 lg:px-8 lg:py-10 cursor-pointer"
                     onClick={() => toggleRole(job.id)}
