@@ -42,7 +42,8 @@ export default function JobListings() {
       <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
         <div className='flex felx-row justify-between gap-15 job-opening-top pt-3'>
           {/* <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1> */}
-          <h1 className="openings-header font-bold text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1>
+          <h1 className="openings-header font-bold text-largeHeader">JOIN&nbsp;OUR<br
+          />TEAM</h1>
           <div className='inline-block jb:hidden'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
@@ -51,7 +52,7 @@ export default function JobListings() {
           </div>
         </div>
         <div className=''>
-          <p className=" pb-10 pt-6 md:pt-2   sm:cols-4 opening-description text-sub-head-color custom-padding">
+          <p className="text-base md:text-md lg:text-xl  pb-10 pt-6 md:pt-5   sm:cols-4 opening-description text-sub-head-color custom-padding">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
         </div>

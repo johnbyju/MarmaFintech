@@ -16,6 +16,8 @@
     box-shadow: inset -1.62px -1.62px 81.17px rgba(255, 255, 255, 0.02); 
 }
 
+   
+
  
  @media (max-width:412px){
 
@@ -58,6 +60,7 @@
         font-size: 48px;
         font-weight: bold;
         font-family: PP Neue Montreal;
+
     }
     .custom-padding{
         font-size: 16px;
