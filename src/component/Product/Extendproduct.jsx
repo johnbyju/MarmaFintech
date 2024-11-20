@@ -63,7 +63,7 @@ const Card = ({ card }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 "
       ></div>
       <div className="absolute inset-0 z-10 product-card-data">
-      <h2 className="title-num font-ppnue ">{card.id}</h2>
+      <h2 className="title-num font-ppnue">{card.id}</h2>
         <p className="uppercase text-white product-title font-ppnue">{card.title}</p>
         <span className="product-description font-ppnue">{card.description}</span>
       </div>
