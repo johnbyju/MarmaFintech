@@ -20,7 +20,7 @@ const Mission = () => {
   }, [])
 
   return (
-    <div className='min-h-screen min-w-screen'>
+    <div className='min-h-screen '>
       <div className='mission-title'>
         <h3 className="text-2xl">OUR MISSION</h3>
       </div>

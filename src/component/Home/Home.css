@@ -7,12 +7,12 @@
   overflow: hidden;
 }
 
-#spline-component{
+/* #spline-component{
   width: 1200px !important;
   width: 100% !important;
   
 }
-
+ */
 
 
 .home-section::-webkit-scrollbar {
@@ -47,9 +47,7 @@
   width: 100%;
 }
 
-.spline-linear-bg {
-  position: relative;
-}
+
 
 #spline-overlay {
   position: absolute;

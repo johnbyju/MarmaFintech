@@ -14,7 +14,7 @@ const ExtendMission = () => {
       </div>
       <div className="mission-wrapper">
         <div className='mission-sections'>
-          <div className='section1 p-5'>
+          <div className='section1 '>
             <div className='img-wrapper'>
               <img src={gif1}/>
             </div>

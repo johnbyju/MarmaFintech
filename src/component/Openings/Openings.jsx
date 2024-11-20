@@ -44,18 +44,18 @@ export default function JobListings() {
           {/* <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1> */}
           <h1 className="openings-header font-bold text-largeHeader">JOIN&nbsp;OUR<br
           />TEAM</h1>
-          <div className='inline-block jb:hidden'>
+          <div className='inline-block jb:hidden mt-4'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
               <ChevronDown className='w-4 h-4 ml-2' />
             </div>
           </div>
         </div>
-        <div className=''>
-          <p className="text-base md:text-md lg:text-xl  pb-10 pt-6 md:pt-5   sm:cols-4 opening-description text-sub-head-color custom-padding">
+       
+          <p className="text-base md:text-md lg:text-lg  pb-10 pt-6 md:pt-5   sm:cols-4 md:gap-x-48 opening-description text-sub-head-color custom-padding">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
-        </div>
+       
       </div>
       {openRoles && (
         <div className='rounded-3xl'>
@@ -109,7 +109,7 @@ export default function JobListings() {
                   </div>
                   {expandedRole === job.id && (
                     <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
-                      <p className="text-sm sm:text-md leading-relaxed">{job.description}</p>
+                      <p className="text-sm sm:text-md md:text-lg leading-relaxed">{job.description}</p>
                       <button className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                       <Modal isOpen={isModalOpen} onClose={closeModal}>
                         <JobApplicationForm Job={job.title} onClose={closeModal} />

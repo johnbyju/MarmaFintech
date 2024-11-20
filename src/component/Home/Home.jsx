@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <section className="home-section ">
       {/* <Menu/> */}
-      <div className='spline-linear-bg'>
+      
         <div id='spline-overlay'></div>
          <Spline
           style={{
@@ -57,7 +57,6 @@ const Home = () => {
           height="1500px"
           id='spline-component'
         ></iframe>  */}
-      </div>
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>
         <img src={logo} />

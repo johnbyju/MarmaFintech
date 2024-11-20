@@ -225,14 +225,14 @@
   }
 
   @media (min-width:1100px){
-    .custom-padding{
+    /* .custom-padding{
       padding-left: 180px;
-    }
+    } */
   }
   @media (min-width:1250px){
-    .custom-padding{
+    /* .custom-padding{
       padding-left: 200px;
-    }
+    } */
   }
 
 
