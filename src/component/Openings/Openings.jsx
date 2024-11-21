@@ -39,12 +39,12 @@ export default function JobListings() {
 
   return (
     <div className="job-listings bg-black text-white mt-20 sm:py-6 px-8 sm:px-14 md:px-20 lg:px-24 xl:px-32 lg:space-y-14 font-sans">
-      <div className=' flex flex-col sm:flex jb:flex-row jb:gap-40 min-w-screen'>
+      <div className=' flex flex-col sm:flex cOne:flex-row cOne:gap-x-48 min-w-screen'>
         <div className='flex felx-row justify-between gap-15 job-opening-top pt-3'>
           {/* <h1 className="text-xl sm:text-3xl font-bold mb-4 text-largeHeader">JOIN&nbsp;OUR<br />TEAM</h1> */}
           <h1 className="openings-header font-bold text-largeHeader">JOIN&nbsp;OUR<br
           />TEAM</h1>
-          <div className='inline-block jb:hidden mt-4'>
+          <div className='inline-block cOne:hidden mt-4'>
             <div className="flex items-center rounded-md border text-sm border-white py-1 px-2 mr-2 mb-2" >
               OPEN ROLES
               <ChevronDown className='w-4 h-4 ml-2' />

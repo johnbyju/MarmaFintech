@@ -67,7 +67,7 @@ export default function ExploreLatest() {
   return (
     <div className="bg-black min-h-[70vh] h-70  rounded-lg  mt-20 px-10 sm:py-6 sm:px-14 md:px-20 lg:px-24 xl:px-32" id='event'>
       <div className="">
-        <div className="flex flex-col md:flex-row sm:items-start mb-8 space-y-4 sm:space-y-5  md:gap-x-48">
+        <div className="flex flex-col cOne:flex-row sm:items-start mb-8 space-y-4 sm:space-y-5  cOne:gap-x-48">
           {/* <h2 className=" text-xl sm:text-3xl font-bold mb-4  sm:w-1/3 text-largeHeader">
             EXPLORE THE <br className=''/> LATEST
           </h2> */}

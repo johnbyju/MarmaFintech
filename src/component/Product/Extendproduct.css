@@ -80,7 +80,7 @@
 }
 
 .product-title {
-  font-size: 32px;
+  font-size: 52px;
   text-align: left;
   letter-spacing: 3px;
   font-weight: 100;
@@ -160,12 +160,13 @@
 @media (min-width:1440px) {
 
   .card {
-    width: 900px !important;
-    height: 700px !important;
+    width: 800px !important;
+    height: 600px !important;
   }
 
+  
   .product-card-data {
-    padding: 80px;
+    /* padding: 80px; */
   }
 }
 
@@ -209,9 +210,9 @@
     font-weight: 100;
   }
 
-  /* .product-title {
-    font-size: 1.5rem;
-  } */
+  .product-title {
+    font-size: 38px;
+  }
 
   .product-description {
     font-size: 0.9rem;
@@ -224,12 +225,15 @@
 
 @media (max-width:660px) {
   .card {
-    height: 350px;
+    height: 500px;
     width: 450px;
   }
 
   .product-card-data {
     padding: 28px !important;
+  }
+  .product-title{
+    font-size: 32px;
   }
 }
 

@@ -11,7 +11,8 @@ export default {
         'xsm': '450px',
         'ise':'400px',
         "esm":"525px",
-        "mi":"420px"
+        "mi":"420px",
+        "cOne":'860px'
 
       },
       colors :{
