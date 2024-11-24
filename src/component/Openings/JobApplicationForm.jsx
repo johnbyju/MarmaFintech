@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './Openings.css';
 import { X } from 'lucide-react';
+import UseBodyScrollLock from '../Wrapperline/UseBodyScrollLock';
 
 export default function JobApplicationForm(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [dragActive, setDragActive] = useState(false);
+  const [isLocked,toggle]=UseBodyScrollLock();
 
   const handleDrag = (e) => {
     e.preventDefault();

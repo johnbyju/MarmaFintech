@@ -52,7 +52,7 @@ export default function JobListings() {
           </div>
         </div>
        
-          <p className="text-base md:text-md lg:text-lg  pb-10 pt-6 md:pt-5   sm:cols-4 md:gap-x-48 opening-description text-sub-head-color custom-padding">
+          <p className="flex flex-wrap text-base md:text-md lg:text-lg  pb-10 pt-6 md:pt-5   sm:cols-4 md:gap-x-48 opening-description text-sub-head-color custom-padding">
             Begin your career journey with us, where we challenge boundaries and redefine technology. Together, we will develop innovative solutions and create a meaningful impact in the digital landscape. Your future starts here!
           </p>
        
