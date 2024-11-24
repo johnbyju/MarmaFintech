@@ -91,7 +91,7 @@ const cards = [
     description:
       "Your Gateway to Staying informed, Engaged, and Leading the Way in the Crypto Space",
     url: "url('product/coindairybg.png')",
-    link: "https://coindairy.com"
+    link: "https://coindiary.com/"
   },
   {
     id: "003",
