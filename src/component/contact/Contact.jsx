@@ -63,7 +63,7 @@ export default function ContactSection() {
                   <FaMapMarkerAlt className="text-xl contact-details-icon text-white"/>
                   </div>
                   <div>
-                  <span className="font-semibold text-white text-base md:text-lg">Loction</span>
+                  <span className="font-semibold text-white text-base md:text-lg">Location</span>
                   </div>
                 </div>
                 <div className='text-start mt-2'>
