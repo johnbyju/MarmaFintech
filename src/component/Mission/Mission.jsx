@@ -21,9 +21,6 @@ const Mission = () => {
 
   return (
     <div className='min-h-screen '>
-      <div className='mission-title'>
-        <h3 className="text-2xl">OUR MISSION</h3>
-      </div>
       <div className="mission-wrapper">
         <div className='mission-sections'>
           <div className='section1'>
@@ -39,7 +36,7 @@ const Mission = () => {
           </div>
           <div className='section2'>
             <div className='img-wrapper'>
-              <img src='/public/gif/mission2.gif'  />
+              <img src='/public/gif/mission2.gif' />
             </div>
             <div className='text-wrapper'>
               <p>We're here to help you</p>
