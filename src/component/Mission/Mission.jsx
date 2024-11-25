@@ -33,7 +33,7 @@ const Mission = () => {
             <div className='text-wrapper'>
               <p><span>Struggling</span> with the ever-</p>
               <p>changing landscape of</p>
-              <p>cryptocurrency and</p>
+              <p><span>Blockchain</span></p>
               <p><span>Web3?</span></p>
             </div>
           </div>
