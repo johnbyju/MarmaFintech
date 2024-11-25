@@ -34,6 +34,13 @@ const Team = () => {
     },
   ];
 
+  const scrollers = document.querySelectorAll(".scroller");
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+addAnimation();
+}
+
+function addAnimation() {
+}
   return (
     < >
       <div className='' id='team'>
@@ -47,6 +54,75 @@ const Team = () => {
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
             </div>
+            {/* <div className='scroller'>
+              <ul className='tag-list scroller__inner'>
+                <li>
+                  <div className='team-card'>
+                    <div className="card-content">
+                      <img src={team.image} alt={team.name} className="profile-pic" />
+                      <div className="info">
+                        <div className='official-name'>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
+                        </div>
+                        <a href={team} target="_blank" rel="noopener noreferrer">
+                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='team-card'>
+                    <div className="card-content">
+                      <img src={team.image} alt={team.name} className="profile-pic" />
+                      <div className="info">
+                        <div className='official-name'>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
+                        </div>
+                        <a href={team} target="_blank" rel="noopener noreferrer">
+                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='team-card'>
+                    <div className="card-content">
+                      <img src={team.image} alt={team.name} className="profile-pic" />
+                      <div className="info">
+                        <div className='official-name'>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
+                        </div>
+                        <a href={team} target="_blank" rel="noopener noreferrer">
+                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className='team-card'>
+                    <div className="card-content">
+                      <img src={team.image} alt={team.name} className="profile-pic" />
+                      <div className="info">
+                        <div className='official-name'>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
+                        </div>
+                        <a href={team} target="_blank" rel="noopener noreferrer">
+                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div> */}
             <div className="carousel">
               <div className="group">
                 {teamList.map((team, index) => (

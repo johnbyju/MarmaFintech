@@ -9,9 +9,9 @@ import gif3 from '/gif/mission3.gif'
 const ExtendMission = () => {
   return (
     <div className='' style={{width:"100%"}} id='mission'>
-      <div className='mission-title'>
+      {/* <div className='mission-title'>
         <h3 className=' text-2xl xsm:text-2xl jb:text-4xl lg:text-5xl'>OUR MISSION</h3>
-      </div>
+      </div> */}
       <div className="mission-wrapper">
         <div className='mission-sections'>
           <div className='section1 '>
@@ -21,7 +21,7 @@ const ExtendMission = () => {
             <div className='text-wrapper'>
               <p><span>Struggling</span> with the ever-</p>
               <p>changing landscape of</p>
-              <p>cryptocurrency and</p>
+              <p> <span>Blockchain</span> and</p>
               <p><span>Web3?</span></p>
             </div>
           </div>

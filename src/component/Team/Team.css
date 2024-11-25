@@ -353,3 +353,16 @@
 
 
 @media (max-width: 320px) {}
+
+
+
+/* AGAIN CUSTOM  */
+
+.scroller{
+  max-width: 103vw;
+
+}
+
+.scroller__inner{
+  display: flex;
+}

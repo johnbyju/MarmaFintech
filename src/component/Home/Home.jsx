@@ -40,21 +40,21 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="home-section ">
+    <section className="home-section min-h-screen">
       {/* <Menu/> */}
       
         <div id='spline-overlay'></div>
-         {/* <Spline
+         <Spline
           style={{
             overflow: 'auto',
           }}
           id='spline-component'
           scene="/energy_cube.spline"
-        />  */}
-          <iframe
+        /> 
+          {/* <iframe
           src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
           id='spline-component'
-        ></iframe>  
+        ></iframe>   */}
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>
         <img src={logo} />

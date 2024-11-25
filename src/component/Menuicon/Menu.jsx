@@ -3,11 +3,17 @@ import './Menu.css';
 import { FaXTwitter } from "react-icons/fa6";
 import { LiaLinkedin } from "react-icons/lia";
 import { AiOutlineInstagram } from "react-icons/ai";
+import UseBodyScrollLock from '../Wrapperline/UseBodyScrollLock';
 
 export default function Menu() {
+  const[isLocked,toggle]=UseBodyScrollLock()
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () =>{
+    setIsOpen(!isOpen);
+    toggle()
+    
+  } 
 
   const menuRef = useRef()
 
@@ -30,6 +36,7 @@ export default function Menu() {
   return (
     <div className="hamburger-menu "  ref={menuRef}>
       <button
+      
         onClick={toggleMenu}
         className={`hamburger-button ${isOpen ? 'open' : ''}`}
         aria-label="Toggle menu"
