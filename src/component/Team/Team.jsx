@@ -49,7 +49,7 @@ function addAnimation() {
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
         </div>
         <div className='team-wrapper min-h-screen'>
-          <div className="team-list-container sm:px-14 md:px-18 lg:px-20 xl:px-24">
+          <div className="team-list-container sm:px-0 md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>

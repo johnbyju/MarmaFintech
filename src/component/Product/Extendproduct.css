@@ -251,6 +251,9 @@
   /* .product-title {
     font-size: 1.2rem;
   } */
+  .product-title{
+    font-size: 26px;
+  }
 
   .product-description {
     font-size: 0.8rem;

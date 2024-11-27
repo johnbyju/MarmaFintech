@@ -11,8 +11,9 @@ export default function Menu() {
 
   const toggleMenu = () =>{
     setIsOpen(!isOpen);
+    // the toggle function
     toggle()
-    
+   
   } 
 
   const menuRef = useRef()
@@ -21,7 +22,7 @@ export default function Menu() {
     let handler =(e)=>{
       if(!menuRef.current.contains(e.target)){
         setIsOpen(false)
-        console.log(menuRef.current);
+        toggle()
         
       }
     };
@@ -29,7 +30,7 @@ export default function Menu() {
     return()=>{
       document.removeEventListener('mousedown',handler);
     }
-  })
+  },[isLocked])
 
 
 
