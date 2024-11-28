@@ -123,6 +123,7 @@ import { ChevronDown, Plus, X } from 'lucide-react';
 import './Openings.css';
 import JobApplicationForm from './JobApplicationForm';
 import Modal from './Modal';
+import UseBodyScrollLock from '../Wrapperline/UseBodyScrollLock';
 
 export default function JobListings() {
   const [jobListings, setJobListings] = useState([]); 
@@ -130,6 +131,9 @@ export default function JobListings() {
   const [expandedRole, setExpandedRole] = useState(null);
   const [activeFilter, setActiveFilter] = useState('All');
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  const[isLocked,toggle]=UseBodyScrollLock();
 
   
   useEffect(() => {

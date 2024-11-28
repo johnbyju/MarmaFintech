@@ -3,10 +3,10 @@ import './Menu.css';
 import { FaXTwitter } from "react-icons/fa6";
 import { LiaLinkedin } from "react-icons/lia";
 import { AiOutlineInstagram } from "react-icons/ai";
-import UseBodyScrollLock from '../Wrapperline/UseBodyScrollLock';
+
 
 export default function Menu() {
-  const[isLocked,toggle]=UseBodyScrollLock()
+  // const[isLocked,toggle]=UseBodyScrollLock()
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () =>{
@@ -30,7 +30,7 @@ export default function Menu() {
     return()=>{
       document.removeEventListener('mousedown',handler);
     }
-  },[isLocked])
+  },[])
 
 
 

@@ -367,7 +367,7 @@
 
 @media (max-width: 375px) {
   .team-card {
-    width: 240px !important;
+    width: 260px !important;
     height: 140px !important;
     padding: 4px !important;
     border-radius: 10px;
@@ -379,16 +379,19 @@
   }
 
   .official-name h3 {
-    font-size: 10px !important;
+    font-size: 16px !important;
   }
 
   .official-name p {
-    font-size: 8px !important;
+    font-size: 12px !important;
   }
 
   .linkedin-icon {
     height: 16px !important;
     width: 16px !important;
+  }
+  .card-content{
+    padding: 10px;
   }
 }
 
@@ -406,11 +409,11 @@
   }
 
   .official-name h3 {
-    font-size: 8px !important;
+    font-size: 14px !important;
   }
 
   .official-name p {
-    font-size: 6px !important;
+    font-size: 10px !important;
   }
 
   .linkedin-icon {
