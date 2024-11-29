@@ -55,7 +55,8 @@ export default function JobApplicationForm(props) {
     expectedsalary: '',
     Portfoliolink: '',
     resume: '',
-  });
+    department:props?.jobCategory
+    });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -88,6 +89,7 @@ export default function JobApplicationForm(props) {
     data.append('noticeperiod', formData.noticeperiod);
     data.append('currentsalary', formData.currentsalary);
     data.append('expectedsalary', formData.expectedsalary);
+    data.append('department', formData?.department);
     if (formData.Portfoliolink){
       data.append('Portfoliolink', formData.Portfoliolink);
     }
@@ -116,6 +118,7 @@ export default function JobApplicationForm(props) {
         expectedsalary: '',
         Portfoliolink: '',
         resume: '',
+        department:"",
       });
       props?.onClose();
     } catch (error) {
@@ -224,7 +227,7 @@ export default function JobApplicationForm(props) {
                   id="noticeperiod"
                   type="text"
                   required
-                  className="mt-1 pl-2 p-0.5 block w-full  rounded-md border border-gray-400 bg-black"
+                  className="mt-1 pl-2 p-0.5 block w-full  rounded-md border border-gray-400 bg-black text-white"
                   placeholder="Notice Period"
                   onChange={handleChange}
                 />

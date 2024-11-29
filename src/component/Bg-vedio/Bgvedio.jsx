@@ -12,7 +12,7 @@ const Bgvedio = () => {
           </video>
           <div className='flex items-center justify-center py-56 px-4'>
             <div className="content " id='animate-word'>
-              <p className='font-ppnue'>  "Redifining the Global <br /> Engagement in digital <br /> World with<span style={{ color: 'rgb(239, 235, 235)' }}> Web3 Innovation"</span></p>
+              <p className='font-ppnue'>  "Redifining  global <br /> engagement in digital <br /> world with <br /><span style={{ color: 'rgb(239, 235, 235)' }}> Web3 innovation"</span></p>
             </div>
           </div>
         </div>

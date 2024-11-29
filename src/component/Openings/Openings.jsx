@@ -143,6 +143,7 @@ export default function JobListings() {
           'http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/jobs/getalljobs'
         );
         const data = await response.json();
+        console.log(data,'response');
         setJobListings(data);
       } catch (error) {
         console.error('Error fetching job listings:', error);
@@ -152,7 +153,12 @@ export default function JobListings() {
     fetchJobs();
   }, []);
 
-  const openModal = () => setIsModalOpen(true);
+const [jobCategory,setjobCategory]=useState("")
+  const openModal=(job)=>{
+    console.log(job,'job')
+    setIsModalOpen(true);
+    setjobCategory(job)
+  }
   const closeModal = () => setIsModalOpen(false);
   const toggleRoles = () => setOpenRoles(!openRoles);
   const toggleRole = (id) => setExpandedRole(expandedRole === id ? null : id);
@@ -256,7 +262,7 @@ export default function JobListings() {
                       </p>
                       <button
                         className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4"
-                        onClick={openModal}
+                        onClick={() => openModal(job.jobCategory)}
                       >
                         Apply Now
                       </button>
@@ -264,6 +270,8 @@ export default function JobListings() {
                         <JobApplicationForm
                           Job={job.jobTitle}
                           onClose={closeModal}
+                          jobCategory={jobCategory}
+                          setjobCategory={setjobCategory}
                         />
                       </Modal>
                     </div>

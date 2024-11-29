@@ -121,7 +121,7 @@ const EventCard = ({ event }) => (
           className="inline-block mt-4 flex-row eventdate"
           style={{ display: 'list-item', marginLeft: '15px' }}
         >
-          {new Date(event.createdAt).toLocaleDateString('en-US', {
+          {new Date(event.eventDate).toLocaleDateString('en-US', {
             month: 'short',
             day: '2-digit',
             year: 'numeric',
@@ -137,7 +137,7 @@ const EventCard = ({ event }) => (
     </div>
     <div className="hidden sm:flex-col jb:block register-container md:cols-span-4">
       <span className="block flex-row eventdate-l">
-        {new Date(event.createdAt).toLocaleDateString('en-US', {
+        {new Date(event.eventDate).toLocaleDateString('en-US', {
           month: 'short',
           day: '2-digit',
           year: 'numeric',
@@ -179,7 +179,7 @@ export default function ExploreLatest() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/event/getallevent');
+        const response = await fetch('http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/event/upcoming');
         const data = await response.json();
         if (data && data.events) {
           setEvents(data.events);
@@ -209,7 +209,7 @@ export default function ExploreLatest() {
         </div>
 
         {loading ? (
-          <p className="text-gray-400 text-center">Loading events...</p>
+          <p className="text-gray-400 text-center">Loading events...</p>         
         ) : (
           <div className="space-y-6 main-wrapper-explore">
             {events.length > 0 ? (
