@@ -39,7 +39,7 @@
     top: 0;
     display: flex;
     padding: 100px 10px;
-    border-top: 1px solid #3d3d3d;
+    border-top: 4px solid #141414;
     background: black;
     align-items: center;
     justify-content: space-evenly;

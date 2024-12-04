@@ -62,7 +62,7 @@ return (
               { icon: FaDiscord, name: 'Discord', handle: '@Marma' },
             ].map((social, index) => (
               <div key={index} className=" py-3 px-3 lg:py-4 lg:px-3 rounded-lg flex flex-col items-start relative contact-social">
-                <span style={{ position: 'absolute', top: '0', right: '26px' }}><ArrowUpRight className='text-sm absolute' /></span>
+                <span style={{ position: 'absolute', top: '15px', right: '30px' }}><ArrowUpRight className='text-sm absolute' /></span>
                 <div className='flex gap-20 md:gap-4 lg:gap-12 relative social-handle px-2  pt-2 justify-center align-middle rounded-md'>
                   <social.icon className="text-2xl mb-2 lg:text-3xl" />
 
