@@ -20,43 +20,44 @@ const Mission = () => {
   }, [])
 
   return (
-    <div className='min-h-screen '>
-      <div className="mission-wrapper">
-        <div className='mission-sections'>
-          <div className='section1'>
-            <div className='img-wrapper'>
-              <img src='/public/gif/mission1.gif' />
-            </div>
-            <div className='text-wrapper'>
-              <p><span>Struggling</span> with the ever-</p>
-              <p>changing landscape of</p>
-              <p><span>Blockchain</span></p>
-              <p><span>Web3?</span></p>
-            </div>
+    <div className='min-h-screen'>
+    <div className="mission-wrapper">
+      <div className='mission-sections'>
+        <div className='section1'>
+          <div className='img-wrapper'>
+            <img src='/public/gif/mission1.gif' />
           </div>
-          <div className='section2'>
-            <div className='img-wrapper'>
-              <img src='/public/gif/mission2.gif' />
-            </div>
-            <div className='text-wrapper'>
-              <p>We're here to help you</p>
-              <p>tackle <span>every challenge</span></p>
-              <p>along the way.</p>
-            </div>
+          <div className='text-wrapper'>
+            <p className="font-ppnue"><span>Struggling</span> with the ever-</p>
+            <p className="font-ppnue">changing landscape of</p>
+            <p className="font-ppnue"><span>Blockchain</span></p>
+            <p className="font-ppnue"><span>Web3?</span></p>
           </div>
-          <div className='section3'>
-            <div className='img-wrapper'>
-              <img src='/public/gif/mission3.gif' />
-            </div>
-            <div className='text-wrapper'>
-              <p>Begin your journey to</p>
-              <p>digital excellence in</p>
-              <p><span>Web3</span> right here!</p>
-            </div>
+        </div>
+        <div className='section2'>
+          <div className='img-wrapper'>
+            <img src='/public/gif/mission2.gif' />
+          </div>
+          <div className='text-wrapper'>
+            <p className="font-ppnue">We're here to help you</p>
+            <p className="font-ppnue">tackle <span className="font-ppnue">every challenge</span></p>
+            <p className="font-ppnue">along the way.</p>
+          </div>
+        </div>
+        <div className='section3'>
+          <div className='img-wrapper'>
+            <img src='/public/gif/mission3.gif' />
+          </div>
+          <div className='text-wrapper'>
+            <p className="font-ppnue">Begin your journey to</p>
+            <p className="font-ppnue">digital excellence in</p>
+            <p className="font-ppnue"><span className="font-ppnue">Web3</span>right here!</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  
   );
 };
 

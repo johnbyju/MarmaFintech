@@ -40,7 +40,7 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x,  transition: "transform 1s ease-out" }} className={`flex gap-4 ${fadeIn ? "fade-in" : "fade-out"}`}>
           <div className="card " style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <p className="inline-block font-normal text-2xl sm:text-4xl lg:text-[2.7rem] text-headerLaseWhite">Products like <span className="text-white">these...</span></p>
+            <p className="inline-block font-normal text-2xl sm:text-4xl lg:text-[2.7rem] text-headerLaseWhite">Our <span className="text-white">Products...</span></p>
           </div>
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;

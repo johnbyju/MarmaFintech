@@ -130,7 +130,7 @@ const EventCard = ({ event }) => (
         <div className="flex justify-start">
           <a href={event.link} target="_blank" rel="noopener noreferrer" className="register-btn py-0.5">
             Register
-            <ArrowUpRight className="" />
+            <ArrowUpRight className=" pl-2 pt-0.5" />
           </a>
         </div>
       </div>

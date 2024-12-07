@@ -172,11 +172,11 @@
 @media (max-width:385px) {
 
   .text-wrapper p {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .img-wrapper {
-    width: 95px !important;
+    width: 105px !important;
     height: auto !important;
   }
 }

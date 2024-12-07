@@ -99,7 +99,7 @@
 
   .linkedin-icon {
     padding-top: 44px;
-    height: 89px;
+    height: auto;
     width: 46px;
   }
 
@@ -288,7 +288,7 @@
     }
   }
 
-  .carousel {
+  /* .carousel {
     padding: 20px 20px;
     overflow: hidden;
     overflow-x: hidden;
@@ -297,7 +297,7 @@
     width: 103vw;
     gap: 20px;
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 99%);
-  }
+  } */
 
 
   .mobile-view {
@@ -311,71 +311,71 @@
 /* Responsive adjustments for smaller screens */
 
 @media (max-width: 480px) {
-  .team-card {
-    width: 280px !important;
-    height: 180px !important;
-    padding: 8px !important;
-    border-radius: 16px;
+  .text-overlay p {
+    font-size: 1px !important;
   }
 
   .profile-pic {
-    height: 60px !important;
-    width: 60px !important;
+    height: 85px !important;
+    width: 85px !important;
   }
 
-  .official-name h3 {
-    font-size: 14px !important;
+  .team-card {
+    height: 200px !important;
+    width: 300px !important;
   }
 
-  .official-name p {
-    font-size: 12px !important;
-    color: #c9c7c7 !important;
+
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 0px;
+    list-style-type: none;
+    opacity: 1;
+    overflow: hidden;
+    padding: 2px 10px;
   }
 
   .linkedin-icon {
-    height: 20px !important;
-    width: 20px !important;
+    padding-bottom: 30px;
+  }
+
+
+  .info {
+    h3 {
+      font-size: 15px !important;
+    }
+
+    p {
+      font-size: 12px !important;
+    }
+
+    .linkedin-icon {
+      height: auto;
+      width: 25px;
+    }
+
+    .official-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 
 @media (max-width: 420px) {
   .team-card {
-    width: 260px !important;
-    height: 160px !important;
-    padding: 6px !important;
-    border-radius: 12px;
+    width: 320px !important;
+        height: 200px !important;
+        padding: 12px !important;
+    border-radius: 8px;
   }
 
   .profile-pic {
-    height: 50px !important;
-    width: 50px !important;
-  }
-
-  .official-name h3 {
-    font-size: 12px !important;
-  }
-
-  .official-name p {
-    font-size: 10px !important;
-  }
-
-  .linkedin-icon {
-    height: 18px !important;
-    width: 18px !important;
-  }
-}
-
-@media (max-width: 375px) {
-  .team-card {
-    width: 260px !important;
-    height: 140px !important;
-    padding: 4px !important;
-    border-radius: 10px;
-  }
-
-  .profile-pic {
-    height: 45px !important;
-    width: 45px !important;
+    height: 95px !important;
+    width: 100px !important;
   }
 
   .official-name h3 {
@@ -387,38 +387,37 @@
   }
 
   .linkedin-icon {
-    height: 16px !important;
-    width: 16px !important;
-  }
-  .card-content{
-    padding: 10px;
+    
+    width: 22px !important;
   }
 }
 
-@media (max-width: 360px) {
+
+
+@media (max-width: 380px) {
   .team-card {
-    width: 220px !important;
-    height: 130px !important;
-    padding: 4px !important;
+    width: 280px !important;
+        height: 180px !important;
+        padding: 8px !important;
     border-radius: 8px;
   }
 
   .profile-pic {
-    height: 40px !important;
-    width: 40px !important;
+    height: 70px !important;
+    width: 75px !important;
   }
 
   .official-name h3 {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .official-name p {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
 
   .linkedin-icon {
-    height: 14px !important;
-    width: 14px !important;
+    
+    width: 22px !important;
   }
 }
 

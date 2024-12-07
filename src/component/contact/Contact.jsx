@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaInstagram, FaDiscord, FaEnvelope, FaPhone, FaMapMarkerA
 import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRight, Phone } from 'lucide-react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -34,23 +35,42 @@ export default function ContactSection() {
           'Content-Type': 'application/json',
         },
       });
-  
+    
       if (response.status === 200 || response.status === 201) {
-        alert('Feedback submitted successfully!');
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Feedback submitted successfully!',
+          background: '#000', // Black background
+          color: '#fff',       // White text
+        });
+    
         setFormData({ name: '', email: '', message: '' });
       } else {
-        alert('Failed to submit feedback. Please try again.');
+        Swal.fire({
+          icon: 'error',
+          title: 'Failed!',
+          text: 'Failed to submit feedback. Please try again.',
+          background: '#000',
+          color: '#fff',
+        });
       }
     } catch (error) {
       console.error('Error submitting feedback:', error.response?.data || error);
-      alert('An error occurred while submitting feedback.');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: 'An error occurred while submitting feedback.',
+        background: '#000',
+        color: '#fff',
+      });
     }
   };
   
 
 return (
 
-  <div className="bg-black text-white p-4 md:px-10 lg:px-20  mr-0 sm:mr-5 rounded-lg" id='contact'>
+  <div className="bg-black text-white p-4 md:px-10 lg:px-24 mr-0 sm:mr-5 rounded-lg" id='contact'>
     <div className="pb-3">
       <div className="grid grid-cols-1 md:grid-cols-[60%,40%] md:gap-4">
         <div className="space-y-8 p-5">
@@ -116,7 +136,7 @@ return (
             </div>
           </div>
         </div>
-        <div className="p-8 mt-4   md:mt-0 max-w-md mx-auto bg-black  form-border rounded-lg shadow-md">
+        <div className="p-8  mt-4   md:mt-0 max-w-md mx-auto bg-black  form-border rounded-lg shadow-md">
           <h2 className="text-xl font-semibold text-white mb-4 text-center">Share your feedback</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="flex space-x-4 pb-0.5">
@@ -155,7 +175,7 @@ return (
         </div>
       </div>
     </div>
-    <hr className="mt-8 md:mt-14 border-0 border-t-1 opacity-50 border-gray-400" />
+    <hr className="mt-8 md:mt-14 border border-t-0 opacity-50 border-gray-400" />
 
     <p className='text-center mt-4 text-headerWhite'>© Marma Fintech 2024</p>
   </div>

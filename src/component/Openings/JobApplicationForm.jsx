@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Openings.css';
 import { X } from 'lucide-react';
 import UseBodyScrollLock from '../Wrapperline/UseBodyScrollLock';
+import Swal from 'sweetalert2';
 
 export default function JobApplicationForm(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -100,14 +101,23 @@ export default function JobApplicationForm(props) {
         method: 'POST',
         body: data,
       });
-
+    
       if (!response.ok) {
         throw new Error('Failed to submit application');
       }
-
+    
       const result = await response.json();
       console.log('Response from server:', result);
-      alert('Application submitted successfully!');
+    
+      // Success alert
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Application submitted successfully!',
+        background: '#000', // Black background
+        color: '#fff',       // White text
+      });
+    
       setFormData({
         name: '',
         applyingDesignation: props?.Job,
@@ -118,12 +128,20 @@ export default function JobApplicationForm(props) {
         expectedsalary: '',
         Portfoliolink: '',
         resume: '',
-        department:"",
+        department: "",
       });
       props?.onClose();
     } catch (error) {
       console.error('Error submitting application:', error);
-      alert('Failed to submit application. Please try again later.');
+    
+      // Error alert
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission Failed!',
+        text: 'Failed to submit application. Please try again later.',
+        background: '#000',
+        color: '#fff',
+      });
     } finally {
       setIsLoading(false);
     }

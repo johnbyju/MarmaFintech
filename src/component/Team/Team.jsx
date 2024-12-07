@@ -44,12 +44,12 @@ function addAnimation() {
   return (
     < >
       <div className='' id='team'>
-        <div className="mobile-view z-10 px-8">
+        <div className="mobile-view z-10 px-0">
           <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
         </div>
         <div className='team-wrapper min-h-screen'>
-          <div className="team-list-container sm:px-10 md:px-18 lg:px-20 xl:px-24">
+          <div className="team-list-container px-3 md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
@@ -133,10 +133,8 @@ function addAnimation() {
                         <div className='official-name'>
                           <h3 className='italic'>{team.name}</h3>
                           <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
+                        </div>                       
                           <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
                       </div>
                     </div>
                   </div>

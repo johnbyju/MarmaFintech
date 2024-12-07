@@ -36,8 +36,7 @@ export default function Menu() {
 
   return (
     <div className="hamburger-menu "  ref={menuRef}>
-      <button
-      
+      <button     
         onClick={toggleMenu}
         className={`hamburger-button ${isOpen ? 'open' : ''}`}
         aria-label="Toggle menu"

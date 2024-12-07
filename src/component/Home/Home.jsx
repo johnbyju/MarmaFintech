@@ -53,8 +53,9 @@ const Home = () => {
         />  */}
           <iframe
           // src="https://my.spline.design/reflectivespinner-ecfd7456ef402c5676a1ad39be3e3d20/"
-          src="https://my.spline.design/reflectivespinner-ecfd7456ef402c5676a1ad39be3e3d20/"
+          src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
           id='spline-component'
+          style={{overflow:'auto'}}
         ></iframe>  
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>
