@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Spline from '@splinetool/react-spline';
 import Menu from '../Menuicon/Menu';
-import logo from '../../../public/logo.png'
+import logo from '/logo.png'
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -55,7 +55,7 @@ const Home = () => {
           // src="https://my.spline.design/reflectivespinner-ecfd7456ef402c5676a1ad39be3e3d20/"
           src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
           id='spline-component'
-          style={{overflow:'auto'}}
+          style={{overflow:'auto',marginTop:'1px'}}
         ></iframe>  
 
       <div className={`logo-comp-wrapper`} id='logo-wrapper'>

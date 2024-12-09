@@ -77,13 +77,18 @@ justify-content: center;
 
 
 
-
+@media (max-width:345px){
+  
+  .content p{
+    font-size: 20px;
+    line-height: 40px;
+    padding: 60px 30px;
+  }
+}
 
 
 @media (min-width:345px){
-  .content{
-    /* padding:30px 50px; */
-  }
+  
   .content p{
     font-size: 20px;
     line-height: 40px;

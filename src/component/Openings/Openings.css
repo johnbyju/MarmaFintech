@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PP Neue Montreal';
-    src: url('/public/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
+    src: url('/fonts/NeueMontreal/ppneuemontreal-bold.otf') format('opentype');
     font-weight: bold;
 }
 

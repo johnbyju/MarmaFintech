@@ -17,10 +17,10 @@ const ExtendMission = () => {
               <img src={gif1} alt="Mission 1"/>
             </div>
             <div className='text-wrapper'>
-              <p className="font-ppnue"><span>Struggling</span> with the ever-</p>
+              <p className="font-ppnue"><span>Struggling</span> with the ever</p>
               <p className="font-ppnue">changing landscape of</p>
-              <p className="font-ppnue"><span>Blockchain</span> and</p>
-              <p className="font-ppnue"><span>Web3?</span></p>
+              <p className="font-ppnue"><span>Blockchain</span> and<span> Web3?</span></p>
+              
             </div>
           </div>
           <div className='section2'>

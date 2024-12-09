@@ -28,7 +28,7 @@ const Mission = () => {
             <img src='/public/gif/mission1.gif' />
           </div>
           <div className='text-wrapper'>
-            <p className="font-ppnue"><span>Struggling</span> with the ever-</p>
+            <p className="font-ppnue"><span>Struggling</span> with the ever</p>
             <p className="font-ppnue">changing landscape of</p>
             <p className="font-ppnue"><span>Blockchain</span></p>
             <p className="font-ppnue"><span>Web3?</span></p>

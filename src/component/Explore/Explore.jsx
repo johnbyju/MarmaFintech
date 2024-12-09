@@ -59,7 +59,7 @@
       title: 'Scaling Ethereum - Mastering Layer 2 Technologies',
       description: 'In this workshop, we will explore the challenges and solutions related to scaling Ethereum, one of the most critical aspects of blockchain development today.',
       date: "OCT 17'th 2024",
-      image: '',
+      image: '/images/event.png',
       alt: 'the event image name',
     },
   ];
@@ -151,16 +151,16 @@ const EventCard = ({ event }) => (
   </div>
 );
 
-// ExploreLatest Component
+
 export default function ExploreLatest() {
 
-  const staticEvents = [
+  const staticsetEvents = [
     {
       id: 1,
       title: 'Scaling Ethereum - Mastering Layer 2 Technologies',
       description: 'In this workshop, we will explore the challenges and solutions related to  scaling Ethereum, one of the most critical aspects of blockchain development today.',
       date: "OCT 17'th 2024",
-      image: '',
+      image: '/images/event.png',
       alt: 'the event image name',
     },
     {
@@ -168,18 +168,40 @@ export default function ExploreLatest() {
       title: 'Scaling Ethereum - Mastering Layer 2 Technologies',
       description: 'In this workshop, we will explore the challenges and solutions related to scaling Ethereum, one of the most critical aspects of blockchain development today.',
       date: "OCT 17'th 2024",
-      image: '',
+      image: '/images/event.png',
+      alt: 'the event image name',
+    },
+    {
+      id: 3,
+      title: 'Scaling Ethereum - Mastering Layer 2 Technologies',
+      description: 'In this workshop, we will explore the challenges and solutions related to scaling Ethereum, one of the most critical aspects of blockchain development today.',
+      date: "OCT 17'th 2024",
+      image: '/images/event.png',
+      alt: 'the event image name',
+    },
+    {
+      id: 4,
+      title: 'Scaling Ethereum - Mastering Layer 2 Technologies',
+      description: 'In this workshop, we will explore the challenges and solutions related to scaling Ethereum, one of the most critical aspects of blockchain development today.',
+      date: "OCT 17'th 2024",
+      image: '/images/event.png',
       alt: 'the event image name',
     },
   ];
 
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  console.log(currentPage);
+  
 
+  console.log(events,'total events');
+  
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/event/upcoming');
+        const response = await fetch(`http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/event/upcoming?page=${currentPage}`);
         const data = await response.json();
         if (data && data.events) {
           setEvents(data.events);
@@ -192,7 +214,11 @@ export default function ExploreLatest() {
     };
 
     fetchEvents();
-  }, []);
+  }, [currentPage]);
+
+  
+
+ 
 
   return (
     <div className="bg-black min-h-[70vh] h-70 rounded-lg mt-20 px-10 sm:py-6 sm:px-14 md:px-20 lg:px-24 xl:px-32" id="event">
@@ -220,6 +246,33 @@ export default function ExploreLatest() {
           </div>
         )}
       </div>
+
+      <div className="flex justify-end mt-4 space-x-2">
+          <div>
+            <button
+              onClick={() => setCurrentPage(1)}
+              className={`px-3 py-1 sm:px-4 sm:py-1 md:px-4 md:py-2 rounded-md border border-gray-500 ${currentPage === 1 ? 'bg-gray-300 text-black' : 'bg-black text-gray-300'}`}
+            >
+              1
+            </button>
+          </div>
+          <div> 
+            <button
+              onClick={() => setCurrentPage(2)}
+              className={`px-3 py-1 sm:px-4 sm:py-1 md:px-4 md:py-2 rounded-md border border-gray-500 ${currentPage === 2 ? 'bg-gray-300 text-black' : 'bg-black text-gray-300'}`}
+            >
+               2
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={() => setCurrentPage(3)}
+              className={`px-3 py-1 sm:px-4 sm:py-1 md:px-4 md:py-2 rounded-md border border-gray-500 ${currentPage === 3 ?'bg-gray-300 text-black' : 'bg-black text-gray-300'}`}
+            >
+              3
+            </button>
+          </div>
+        </div>
     </div>
   );
 }

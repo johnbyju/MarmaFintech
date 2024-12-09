@@ -6,7 +6,7 @@ const Team = () => {
   const teamList = [
     {
       id: 1,
-      name: "Ananda Prabhu Rajendran",
+      name: "Ananda prabhu rajendaran",
       position: "Managing Director",
       image: '/images/profile/profile1.png',
       linkedin: 'https://in.linkedin.com/',
@@ -44,12 +44,12 @@ function addAnimation() {
   return (
     < >
       <div className='' id='team'>
-        <div className="mobile-view z-10 px-0">
+        <div className="mobile-view z-10 pl-5">
           <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
         </div>
         <div className='team-wrapper min-h-screen'>
-          <div className="team-list-container px-3 md:px-18 lg:px-20 xl:px-24">
+          <div className="team-list-container px-0 md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
@@ -146,6 +146,24 @@ function addAnimation() {
                     <div className="card-content">
                       <img src={team.image} alt={team.name} className="profile-pic" />
                       <div className="info">
+                        <div className='official-name'>
+                          <h3 className='italic'>{team.name}</h3>
+                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
+                        </div>                       
+                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              
+              {/* <div className="group">
+                {teamList.map((team, index) => (
+                  <div key={team.id} className='team-card'>
+                    <div className="card-content">
+                      <img src={team.image} alt={team.name} className="profile-pic" />
+                      <div className="info">
                         <div>
                           <h3 className='italic'>{team.name}</h3>
                           <p style={{ color: '#C9C7C782' }}>{team.position}</p>
@@ -157,7 +175,7 @@ function addAnimation() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
