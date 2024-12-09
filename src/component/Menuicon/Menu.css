@@ -138,11 +138,11 @@
 
     .menu-content {
       position: fixed;
-      top: 70px;
-      right: 40px;
+      top: 75px;
+      right: 30px;
       bottom: 180px;
       width: 180px;
-      height: 300px;
+      height: 272px;
       border-radius: 20px 10px 20px 20px;
       background-color: #b3b2b2;
       color: #0000;
@@ -153,8 +153,12 @@
       justify-content: space-between;
     }
 
+    .menu-content ul{
+      padding: 6px;
+    }
+
     .menu-content ul li {
-      margin-bottom: 10px;
+      margin-bottom: 3px;
     }
     .menu-content ul li a{
       font-size: 16px;
@@ -163,7 +167,7 @@
 
     .social-icons {
       display: flex;
-      gap: 15px;
+      gap: 17px;
       justify-content: center;
   
     }
@@ -178,8 +182,8 @@
     }
 
     .custom-icon svg{
-       height: 22px ;
-       width: 25px ;
+       height: 19px ;
+       width: 24px ;
     }
   
   }

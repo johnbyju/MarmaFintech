@@ -6,36 +6,29 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 
 export default function Menu() {
-  // const[isLocked,toggle]=UseBodyScrollLock()
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () =>{
-    setIsOpen(!isOpen);
-    // the toggle function
-    toggle()
-   
+    setIsOpen(!isOpen); 
   } 
 
-  const menuRef = useRef()
-
   useEffect(() => {
-    let handler =(e)=>{
-      if(!menuRef.current.contains(e.target)){
-        setIsOpen(false)
-        toggle()
-        
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown',handler);
-    return()=>{
-      document.removeEventListener('mousedown',handler);
-    }
-  },[])
 
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
 
 
   return (
-    <div className="hamburger-menu "  ref={menuRef}>
+    <div className="hamburger-menu ">
       <button     
         onClick={toggleMenu}
         className={`hamburger-button ${isOpen ? 'open' : ''}`}
