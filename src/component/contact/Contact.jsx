@@ -105,7 +105,7 @@ return (
                 </div>
               </div>
               <div>
-                <div className="text-gray-400 text-base md:text-md">marma@gmail.com</div>
+                <div className="text-gray-400 text-base md:text-lg">marma@gmail.com</div>
               </div>
             </div>
             <div className='flex flex-col gap-2'>
@@ -136,7 +136,7 @@ return (
             </div>
           </div>
         </div>
-        <div className="p-8  mt-4   md:mt-0 max-w-md mx-auto bg-black  form-border rounded-lg shadow-md">
+        <div className="p-8  mt-4   md:mt-0 max-w-md mx-auto bg-[#010101] form-border rounded-lg shadow-md">
           <h2 className="text-xl font-semibold text-white mb-4 text-center">Share your feedback</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="flex space-x-4 pb-0.5">
@@ -146,7 +146,7 @@ return (
                 placeholder="Name"
                 onChange={handleChange}
                 value={formData.name}
-                className="w-full p-3 sm:w-full bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+                className="w-full p-3 sm:w-full bg-[#010101] text-white border border-customBorder  rounded focus:outline-none "
               />
             </div>
             <input
@@ -155,7 +155,7 @@ return (
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className=" p-3 w-full block bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+              className=" p-3 w-full block bg-[#010101] text-white border border-customBorder rounded focus:outline-none"
             />
             <textarea
               placeholder="Message"
@@ -163,11 +163,11 @@ return (
               name='message'
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 bg-black text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-gray-600"
+              className="w-full p-3 bg-[#010101] text-white border border-customBorder rounded focus:outline-none"
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-black text-white font-semibold py-3 rounded border-gray-400 form-submit-btn  transition duration-300"
+              className="w-full bg-[#131212] rounded-lg text-white font-semibold py-3  form-border form-submit-btn  transition duration-300"
             >
               Send your Message
             </button>

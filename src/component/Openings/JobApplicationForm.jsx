@@ -286,7 +286,7 @@ export default function JobApplicationForm(props) {
                 value={formData.Portfoliolink}
                 name="Portfoliolink"
                 type="url"
-                className="mt-1 block w-full py-1 rounded-md border border-gray-400 bg-black text-white"
+                className="mt-1 block text-center w-full py-1 rounded-md border border-gray-400 bg-black text-white"
                 placeholder="Enter URL"
                 onChange={handleChange}
               />
