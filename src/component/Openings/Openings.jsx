@@ -86,7 +86,7 @@ export default function JobListings() {
         <div className='rounded-3xl'>
           <div className="flex justify-center px-4  md:hidden gap-2 sm:gap-6 mb-4 filter-btn">
             {/* {['All', 'Design', 'Development', 'Marketing','Accounts','human resourse','staff'].map((filter) => ( */}
-            {['All', 'Design', 'Information tech', 'Marketing'].map((filter) => (
+            {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
@@ -97,15 +97,15 @@ export default function JobListings() {
               </button>
             ))}
           </div>
-          <div className='border rounded-3xl bg-openingsBg' style={{ borderColor: ' #444444' }}>
+          <div className='border rounded-2xl sm:rounded-3xl bg-openingsBg' style={{ borderColor: ' #444444' }}>
             <div className="px-8 pt-8  justify-start gap-0 sm:gap-2 mb-4 filter-btn hidden md:flex">
               {/* {['All', 'Design', 'It', 'Marketing','Accounts','human resourse','staff'].map((filter) => ( */}
-                {['All', 'Design', 'It', 'Marketing'].map((filter) => (
+                {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   id='job-opening-btn'
-                  className={`font-ppnue rounded-2xl   lg:px-12 lg:py-6 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                  className={`font-ppnue rounded-xl  lg:px-12 lg:py-6 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
                 >
                   {filter}
                 </button>
@@ -113,7 +113,7 @@ export default function JobListings() {
             </div>
             <div className='p-2'>
               {filteredJobs.map((job, index) => (
-                <div key={job.id} className="border-gray-600 apply-container py-3 rounded-3xl lg:px-0  sm:px-0 sm:py-5 px-3 p-3">
+                <div key={job.id} className="border-gray-600 apply-container py-3 rounded-3xl lg:px-3  sm:px-2 sm:py-5 px-3 p-3">
                   <div
                     className="flex flex-row sm:flex-row justify-between  py-1 px-2 sm:p-4 lg:px-4 lg:py-5 cursor-pointer"
                     onClick={() => toggleRole(job._id)}

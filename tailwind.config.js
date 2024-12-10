@@ -33,6 +33,7 @@ export default {
       },
       fontFamily:{
         ppnue :["PP Neue Montreal",'sans-serif'],
+        ppbook:["PP BOOK",'sans-serif'],
       }
     },
   },

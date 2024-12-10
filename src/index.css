@@ -6,7 +6,11 @@
   font-family: 'PP Neue Montreal';
   src: url('/fonts/NeueMontreal/ppneuemontreal-medium.otf') format('opentype');
   font-weight: normal;
- 
+}
+@font-face {
+  font-family: 'PP BOOK';
+  src: url('/fonts/ppneuemontreal-book.otf') format('opentype');
+  font-weight: normal;
 }
 
 

@@ -51,8 +51,8 @@ const Card = ({ card }) => {
       ></div>
       <div className="absolute inset-0 z-10 product-card-data">
       <h2 className="title-num font-ppnue">{card.id}</h2>
-        <p className="uppercase text-white product-title font-ppnue">{card.title}</p>
-        <span className="product-description font-ppnue">{card.description}</span>
+        <p className="uppercase text-white product-title font-ppbook">{card.title}</p>
+        <span className="product-description font-ppbook">{card.description}</span>
       </div>
       <div className="absolute top-4 right-4 z-20 text-white">
         <ArrowUpRight size={30} />
@@ -75,8 +75,7 @@ const cards = [
   {
     id: "002",
     title: "COINDIARY",
-    description:
-      "Your Gateway to Staying informed, Engaged, and Leading the Way in the Crypto Space.",
+    description: "Your Gateway to Staying informed, Engaged, and Leading the Way in the Crypto Space.",
     url: "url('product/coindairybg.png')",
     link: "https://coindiary.com/"
   },

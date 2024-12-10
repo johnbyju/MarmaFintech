@@ -35,12 +35,12 @@ const Team = () => {
   ];
 
   const scrollers = document.querySelectorAll(".scroller");
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-addAnimation();
-}
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
 
-function addAnimation() {
-}
+  function addAnimation() {
+  }
   return (
     < >
       <div className='' id='team'>
@@ -48,7 +48,11 @@ function addAnimation() {
           <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
         </div>
-        <div className='team-wrapper min-h-screen'>
+        <div>
+          <img src="/images/group.png" alt="" className='w-full saturate-0' />
+        </div>
+
+        <div className='team-wrapper'>
           <div className="team-list-container px-0 md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
@@ -133,8 +137,8 @@ function addAnimation() {
                         <div className='official-name'>
                           <h3 className='italic'>{team.name}</h3>
                           <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>                       
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </div>
+                        <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
                       </div>
                     </div>
                   </div>
@@ -149,15 +153,15 @@ function addAnimation() {
                         <div className='official-name'>
                           <h3 className='italic'>{team.name}</h3>
                           <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>                       
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
+                        </div>
+                        <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              
+
               {/* <div className="group">
                 {teamList.map((team, index) => (
                   <div key={team.id} className='team-card'>

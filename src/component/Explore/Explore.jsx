@@ -264,14 +264,6 @@ export default function ExploreLatest() {
                2
             </button>
           </div>
-          <div>
-            <button
-              onClick={() => setCurrentPage(3)}
-              className={`px-3 py-1 sm:px-4 sm:py-1 md:px-4 md:py-2 rounded-md border border-gray-500 ${currentPage === 3 ?'bg-gray-300 text-black' : 'bg-black text-gray-300'}`}
-            >
-              3
-            </button>
-          </div>
         </div>
     </div>
   );
