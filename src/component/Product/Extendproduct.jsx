@@ -20,20 +20,7 @@ const HorizontalScrollCarousel = () => {
 
   const [fadeIn, setFadeIn] = useState(false);
 
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     if (window.scrollY > targetRef.current.offsetTop - window.innerHeight / 1.5) {
-  //       setFadeIn(true); 
-  //     } else {
-  //       setFadeIn(false); 
-  //     }
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-black">
@@ -82,7 +69,7 @@ const cards = [
     title: "THROUGHBIT",
     description:
       "Redefining Bitcoin and Ethereum Transactions in India with INRFalcon for Lightning-Fast Trading.",
-    url: "url('/product/throughbit.avif')",
+    url: "url('/product/throughbit.png')",
     link: "https://throughbit.com"
   },
   {
