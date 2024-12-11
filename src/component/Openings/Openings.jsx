@@ -98,14 +98,14 @@ export default function JobListings() {
             ))}
           </div>
           <div className='border rounded-2xl sm:rounded-3xl bg-openingsBg' style={{ borderColor: ' #444444' }}>
-            <div className="px-8 pt-8  justify-start gap-10 sm:gap-2 mb-4 filter-btn hidden md:flex">
+            <div className="px-8 pt-8  justify-start gap-10 sm:gap-2.5 mb-4 filter-btn hidden md:flex">
               {/* {['All', 'Design', 'It', 'Marketing','Accounts','human resourse','staff'].map((filter) => ( */}
                 {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   id='job-opening-btn'
-                  className={`font-ppnue rounded-xl  lg:px-12 lg:py-6 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                  className={`font-ppnue rounded-xl  lg:px-8 lg:py-5 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
                 >
                   {filter}
                 </button>
