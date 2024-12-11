@@ -1,25 +1,19 @@
-/* .team-wrapper {
+.team-wrapper{
   background-color   : black;
   color              : white;
   padding            : 0;
   background-image   : url(/team.png);
   background-repeat  : no-repeat;
-  background-size    : cover;
+  background-size    : 100% 100%;
   background-position: center;
   display            : flex;
   flex-direction     : column;
   justify-content    : end;
   box-shadow         : #3d3d3d;
   overflow-wrap      : anywhere;
-} */
-
-/* #id{
-  
-} */
-
-.team-image_div{
-  overflow: hidden !important;
 }
+
+
 
 .main-wrapper {
   border       : 1px solid #3d3d3d;
@@ -40,7 +34,6 @@
     font-size         : 25px;
     min-width         : -moz-fit-content;
     min-width         : fit-content;
-    /* padding        : 0 16px; */
     overflow          : hidden;
 
     span {
@@ -260,7 +253,7 @@
 @media (max-width:750px) {
 
   .team-wrapper{
-    background-size    : 200% 100%;
+    background-size    : 135% 86%;
   }
 
   .text-overlay p {
@@ -391,6 +384,10 @@
       justify-content: center;
     }
   }
+
+  .team-wrapper{
+    background-size: 140% 80%;
+  }
 }
 
 @media (max-width: 420px) {
@@ -417,6 +414,9 @@
   .linkedin-icon {
 
     width: 22px !important;
+  }
+  .team-wrapper{
+    background-size: 120% 80%;
   }
 }
 
@@ -446,6 +446,9 @@
   .linkedin-icon {
 
     width: 22px !important;
+  }
+  .team-wrapper{
+    background-size: 140% 70%;
   }
 }
 

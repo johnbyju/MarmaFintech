@@ -47,11 +47,8 @@ const Team = () => {
         <div className="mobile-view z-30 pl-5">
           <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
-        </div>
-        <div className='team-image_div'>
-          <img src="/team.png" alt="" className=' w-full saturate-0' style={{paddingTop: '30px',transform: 'scale(1.6)'}}/>
-        </div>
-        <div className='team-wrapper '>
+        </div>     
+        <div className='team-wrapper min-h-screen'>
           <div className="team-list-container  md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
@@ -91,7 +88,6 @@ const Team = () => {
                   </div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
