@@ -84,7 +84,7 @@ return (
               <div key={index} className=" py-3 px-3 lg:py-4 lg:px-3 rounded-lg flex flex-col items-start relative contact-social cursor-pointer">
                 <span style={{ position: 'absolute', top: '15px', right: '30px' }}><ArrowUpRight className='text-sm absolute' /></span>
                 <div className='flex gap-20 md:gap-4 lg:gap-12 relative social-handle px-2  pt-2 justify-center align-middle rounded-md'>
-                  <social.icon className="text-2xl mb-2 lg:text-3xl" />
+                  <social.icon className="text-xl mb-2 lg:text-2xl" />
 
                 </div>
                 <div className="text-base md:text-md lg:text-lg pt-2">{social.name}</div>
@@ -105,7 +105,7 @@ return (
                 </div>
               </div>
               <div>
-                <div className="text-gray-400 text-base md:text-lg">marma@gmail.com</div>
+                <div className="text-gray-400 text-base">marma@gmail.com</div>
               </div>
             </div>
             <div className='flex flex-col gap-2 cursor-pointer'>
@@ -118,7 +118,7 @@ return (
                 </div>
               </div>
               <div className=''>
-                <div className="text-gray-400 text-base md:text-lg ">+91 9092929232</div>
+                <div className="text-gray-400 text-base">+91 9092929232</div>
               </div>
             </div>
             <div className='flex flex-col gap-1 cursor-pointer'>
@@ -131,7 +131,7 @@ return (
                 </div>
               </div>
               <div className='text-start mt-2'>
-                <div className="text-gray-400 text-base md:text-lg">Shri Parvathy Tech Park,R.S. Puram, Coimbatore - 641001</div>
+                <div className="text-gray-400 text-base md:text-base">Shri Parvathy Tech Park,R.S. Puram, Coimbatore - 641001</div>
               </div>
             </div>
           </div>

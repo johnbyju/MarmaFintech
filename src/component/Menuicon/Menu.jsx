@@ -50,13 +50,13 @@ export default function Menu() {
             </ul>
             <div className="social-icons">
               <a href="#" aria-label="Twitter" className='custom-icon'>
-              <FaXTwitter />
+              <img src='/icons/Vector.svg' alt="" />
               </a>
               <a href="#" aria-label="LinkedIn" className='custom-icon'>
-              <LiaLinkedin className=''/>
+              <img src='/icons/Group.svg' alt="" />
               </a>
               <a href="#" aria-label="Instagram" className='custom-icon'>
-              <AiOutlineInstagram />
+              <img src='/icons/insta.png' alt="" />
               </a>
             </div>
           </nav>
