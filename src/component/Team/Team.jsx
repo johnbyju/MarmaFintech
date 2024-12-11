@@ -44,89 +44,20 @@ const Team = () => {
   return (
     < >
       <div className='' id='team'>
-        <div className="mobile-view z-10 pl-5">
+        <div className="mobile-view z-30 pl-5">
           <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
           <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
         </div>
-        <div>
-          <img src="/images/group.png" alt="" className='w-full saturate-0' />
+        <div className='team-image_div'>
+          <img src="/team.png" alt="" className=' w-full saturate-0' style={{paddingTop: '30px',transform: 'scale(1.6)'}}/>
         </div>
-
-        <div className='team-wrapper'>
-          <div className="team-list-container px-14 md:px-18 lg:px-20 xl:px-24">
+        <div className='team-wrapper '>
+          <div className="team-list-container  md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
             </div>
-            {/* <div className='scroller'>
-              <ul className='tag-list scroller__inner'>
-                <li>
-                  <div className='team-card'>
-                    <div className="card-content">
-                      <img src={team.image} alt={team.name} className="profile-pic" />
-                      <div className="info">
-                        <div className='official-name'>
-                          <h3 className='italic'>{team.name}</h3>
-                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className='team-card'>
-                    <div className="card-content">
-                      <img src={team.image} alt={team.name} className="profile-pic" />
-                      <div className="info">
-                        <div className='official-name'>
-                          <h3 className='italic'>{team.name}</h3>
-                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className='team-card'>
-                    <div className="card-content">
-                      <img src={team.image} alt={team.name} className="profile-pic" />
-                      <div className="info">
-                        <div className='official-name'>
-                          <h3 className='italic'>{team.name}</h3>
-                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className='team-card'>
-                    <div className="card-content">
-                      <img src={team.image} alt={team.name} className="profile-pic" />
-                      <div className="info">
-                        <div className='official-name'>
-                          <h3 className='italic'>{team.name}</h3>
-                          <p className='official-position' style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-
-            </div> */}
+            
             <div className="carousel">
               <div className="group">
                 {teamList.map((team, index) => (
@@ -161,25 +92,6 @@ const Team = () => {
                 ))}
               </div>
 
-
-              {/* <div className="group">
-                {teamList.map((team, index) => (
-                  <div key={team.id} className='team-card'>
-                    <div className="card-content">
-                      <img src={team.image} alt={team.name} className="profile-pic" />
-                      <div className="info">
-                        <div>
-                          <h3 className='italic'>{team.name}</h3>
-                          <p style={{ color: '#C9C7C782' }}>{team.position}</p>
-                        </div>
-                        <a href={team} target="_blank" rel="noopener noreferrer">
-                          <img src={LinkedIn} alt="LinkedIn" className="linkedin-icon" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div> */}
             </div>
           </div>
         </div>

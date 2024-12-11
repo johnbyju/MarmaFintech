@@ -81,7 +81,7 @@ return (
               { icon: FaXTwitter, name: 'Twitter', handle: '@Marma' },
               { icon: FaDiscord, name: 'Discord', handle: '@Marma' },
             ].map((social, index) => (
-              <div key={index} className=" py-3 px-3 lg:py-4 lg:px-3 rounded-lg flex flex-col items-start relative contact-social">
+              <div key={index} className=" py-3 px-3 lg:py-4 lg:px-3 rounded-lg flex flex-col items-start relative contact-social cursor-pointer">
                 <span style={{ position: 'absolute', top: '15px', right: '30px' }}><ArrowUpRight className='text-sm absolute' /></span>
                 <div className='flex gap-20 md:gap-4 lg:gap-12 relative social-handle px-2  pt-2 justify-center align-middle rounded-md'>
                   <social.icon className="text-2xl mb-2 lg:text-3xl" />
@@ -95,8 +95,8 @@ return (
 
           <div className="  grid grid-cols-2 gap-4  lg:grid-cols-3 sm:grid-cols-2 ">
             {/* Email Section */}
-            <div className='flex flex-col gap-2'>
-              <div className='flex flex-row items-center gap-6'>
+            <div className='flex flex-col gap-2 cursor-pointer'>
+              <div className='flex flex-row items-center gap-6 '>
                 <div className='contact-icons px-2 py-2 rounded-md'>
                   <FaEnvelope className="text-xl contact-details-icon" />
                 </div>
@@ -108,7 +108,7 @@ return (
                 <div className="text-gray-400 text-base md:text-lg">marma@gmail.com</div>
               </div>
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 cursor-pointer'>
               <div className='flex flex-row items-center gap-6 '>
                 <div className='contact-icons px-1.5 py-1.5 rounded-md'>
                   <Phone className="text-xl contact-details-icon text-white" />
@@ -118,10 +118,10 @@ return (
                 </div>
               </div>
               <div className=''>
-                <div className="text-gray-400 text-base md:text-lg">marma@gmail.com</div>
+                <div className="text-gray-400 text-base md:text-lg ">+91 9092929232</div>
               </div>
             </div>
-            <div className='flex flex-col gap-1'>
+            <div className='flex flex-col gap-1 cursor-pointer'>
               <div className='flex flex-row items-center mt-3 sm:mt-0 gap-6'>
                 <div className='contact-icons px-2 py-2 rounded-md'>
                   <FaMapMarkerAlt className="text-xl contact-details-icon text-white" />

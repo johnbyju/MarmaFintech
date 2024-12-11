@@ -2,9 +2,9 @@
   background-color   : black;
   color              : white;
   padding            : 0;
-  background-image   : url(/images/group.png);
+  background-image   : url(/team.png);
   background-repeat  : no-repeat;
-  background-size    : 100%;
+  background-size    : cover;
   background-position: center;
   display            : flex;
   flex-direction     : column;
@@ -17,6 +17,9 @@
   
 } */
 
+.team-image_div{
+  overflow: hidden !important;
+}
 
 .main-wrapper {
   border       : 1px solid #3d3d3d;
@@ -239,6 +242,12 @@
     display: none !important;
   }
 
+}
+
+@media (min-width:768px){
+  .web-view{
+    padding-left: 40px;
+  }
 }
 
 @media (max-width:768px) {
