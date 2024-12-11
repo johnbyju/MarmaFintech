@@ -105,7 +105,7 @@ export default function JobListings() {
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   id='job-opening-btn'
-                  className={`font-ppnue rounded-xl  lg:px-8 lg:py-5 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-white'}`}
+                  className={`font-ppnue rounded-xl  lg:px-10 lg:py-4 text-sm sm:text-lg  py-2 px-2  md:py-3 md:px-4  cursor-pointer ${activeFilter === filter ? 'bg-white text-black' : 'bg-jobFilter text-btn'}`}
                 >
                   {filter}
                 </button>

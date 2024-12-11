@@ -31,6 +31,7 @@ export default {
           'openingsBg':'#161616D9',
           'jobFilter':'#303030',
           'customBorder': 'rgb(24, 26, 29)',
+          'btn':'#FFFFFFD1'
       },
       fontFamily:{
         ppnue :["PP Neue Montreal",'sans-serif'],
