@@ -100,7 +100,7 @@ export default function JobListings() {
           <div className='border rounded-2xl sm:rounded-3xl bg-openingsBg' style={{ borderColor: ' #444444' }}>
             <div className="px-8 pt-8  justify-start gap-10 sm:gap-2.5 mb-4 filter-btn hidden md:flex">
               {/* {['All', 'Design', 'It', 'Marketing','Accounts','human resourse','staff'].map((filter) => ( */}
-                {['All', 'Design', 'Development', 'Marketing'].map((filter) => (
+                {['All', 'Design', 'Development', 'Marketing','Accounts'].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
