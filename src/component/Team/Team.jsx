@@ -44,17 +44,20 @@ const Team = () => {
   return (
     < >
       <div className='' id='team'>
-        <div className="mobile-view z-30 pl-5">
-          <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
-          <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
-        </div>     
-        <div className='team-wrapper min-h-screen'>
+
+        <div className='team-wrapper min-h-screen felx flex-col '>
+
+          <div className="mobile-view z-30 pl-5">
+            <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
+            <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
+          </div>
+
           <div className="team-list-container  md:px-18 lg:px-20 xl:px-24">
             <div className="text-overlay web-view">
               <p className='text-headerLaseWhite '>We are a team of </p>
               <p className='text-headerWhite '><span>thinkers</span> & <span>makers</span>...</p>
             </div>
-            
+
             <div className="carousel">
               <div className="group">
                 {teamList.map((team, index) => (

@@ -233,6 +233,7 @@
 
   .mobile-view {
     display: none !important;
+    
   }
 
 }
@@ -246,6 +247,10 @@
 @media (max-width:768px) {
   .web-view {
     display: none !important;
+  }
+  .team-wrapper{
+    display: flex;
+    justify-content: space-between;
   }
 }
 
