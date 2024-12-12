@@ -248,6 +248,9 @@
   .web-view {
     display: none !important;
   }
+  .mobile-view{
+    display: block !important;
+  }
   .team-wrapper{
     display: flex;
     justify-content: space-between;

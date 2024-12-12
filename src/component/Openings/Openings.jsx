@@ -24,7 +24,7 @@ export default function JobListings() {
   const toggleRole = (id) => setExpandedRole(expandedRole === id ? null : id);
   
 
-    const [isLocked, toggle] = UseBodyScrollLock();
+
 
     const openModal = () => {
       setIsModalOpen(true);
@@ -51,7 +51,7 @@ export default function JobListings() {
     };
   
     fetchJobs();
-  }, []);
+  }, []);                            
   
 
  
@@ -136,7 +136,10 @@ export default function JobListings() {
                   </div>
                   {expandedRole === job._id && (
                     <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
-                      <p className="text-sm sm:text-md md:text-lg leading-relaxed pb-1 sm:pb-3">{job.jobDescription}</p>
+                        <p className="text-sm sm:text-md md:text-lg leading-relaxed pb-1 sm:pb-3" dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+                      {/* <div>
+                        set
+                      </div> */}
                       <button className="bg-black text-white rounded-lg border border-gray-400 py-1 px-2 mt-2 sm:py-2 sm:px-4" onClick={openModal}>Apply Now</button>
                       <Modal isOpen={isModalOpen} onClose={closeModal}>
                         <JobApplicationForm Job={job.JobTitle} onClose={closeModal} />
