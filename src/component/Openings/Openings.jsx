@@ -23,7 +23,7 @@ export default function JobListings() {
   const toggleRoles = () => setOpenRoles(!openRoles);
   const toggleRole = (id) => setExpandedRole(expandedRole === id ? null : id);
   
-
+  const[isLocked,toggle]=UseBodyScrollLock();
 
 
     const openModal = () => {
@@ -136,7 +136,7 @@ export default function JobListings() {
                   </div>
                   {expandedRole === job._id && (
                     <div className="p-2 sm:p-4  rounded-md" style={{ backgroundColor: '161616E3' }}>
-                        <p className="text-sm sm:text-md md:text-lg leading-relaxed pb-1 sm:pb-3" dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+                        <p className="jobDescription_Style text-sm sm:text-md md:text-lg leading-relaxed pb-1 sm:pb-3" dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
                       {/* <div>
                         set
                       </div> */}
