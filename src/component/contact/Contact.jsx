@@ -177,7 +177,7 @@ return (
     </div>
     <hr className="mt-8 md:mt-14 border border-t-0 opacity-50 border-gray-400" />
 
-    <p className='text-center mt-4 text-headerWhite'>© 2024 Marma.All rights reserved.</p>
+    <p className='text-center mt-4 text-headerWhite'>© 2024 Marma Fintech. All rights reserved.</p>
   </div>
 )}
         
