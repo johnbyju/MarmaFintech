@@ -8,6 +8,7 @@ import ExtendMission from '../Mission/ExtendMission'
 import Menu from '../Menuicon/Menu'
 import Extendproduct from '../Product/Extendproduct'
 import Home from '../Home/Home'
+import Example from '../ExtendProduct/File'
 const Border = () => {
     return (
         <>
@@ -17,6 +18,7 @@ const Border = () => {
                 <Bgvedio/>
                 <ExtendMission/>
                 <Extendproduct/>
+                {/* <Example/> */}
                 <Team />
                 <Openings />
                 <Explore />
