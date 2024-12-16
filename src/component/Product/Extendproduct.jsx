@@ -16,7 +16,7 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+  const x = useTransform(scrollYProgress, [1, 0], ["-80%", "1%"]);
 
 
 
@@ -24,7 +24,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-black">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden motion-div-cards">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden motion">
         <motion.div style={{ x,  transition: "transform 1s ease-out" }} className={`flex gap-4`}>
           <div className="card " style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
             <p className="inline-block font-normal text-2xl sm:text-4xl lg:text-[2.7rem] text-headerLaseWhite">Our <span className="text-white">Products...</span></p>
