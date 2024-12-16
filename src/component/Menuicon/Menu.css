@@ -7,7 +7,7 @@
     top: 3rem;
     right: 3rem;
     z-index: 999;
-    background: #eee2e2;
+    background-color: rgba(238, 226, 226, 0.6);
     border: none;
     width: 48px;
     height: 48px;
@@ -110,7 +110,7 @@
       top: 2rem;
       right: 2rem;
       z-index: 999;
-      background: #eee2e2;
+      background-color: rgba(238, 226, 226, 0.6);
       border: none;
       width: 35px;
       height: 35px;

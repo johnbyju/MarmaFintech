@@ -40,7 +40,7 @@ export default function Menu() {
 
       {isOpen && (
         
-          <nav className="menu-content">
+          <nav className="menu-content  bg-[#FFFFFF1A]   rounded-lg  backdrop-blur-md">
             <ul>
               <li><a href="#mission" onClick={toggleMenu}>Mission</a></li>
               <li><a href="#products" onClick={toggleMenu}>Products</a></li>

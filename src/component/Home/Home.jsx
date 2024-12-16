@@ -17,9 +17,9 @@ const Home = () => {
       if (window.innerWidth >= 1400 && window.innerWidth <= 1700) {
         setScaleFactor(2.5);
       } else if (window.innerWidth >= 1024) {
-        setScaleFactor(2.3); // Adjust as needed
+        setScaleFactor(2.6); // Adjust as needed
       } else if (window.innerWidth >= 768) {
-        setScaleFactor(1.8);
+        setScaleFactor(2);
       } else {
         setScaleFactor(1.2); // Default for smaller screens
       }
@@ -46,9 +46,9 @@ const Home = () => {
           transform: `scale(${scaleFactor}) translateY(${scrollPosition * 0.5}px)`,
           transformOrigin: 'center',
           transition: 'transform 0.1s ease-out',
-          width: '100%', /* Adjust width based on container */
+          width: '100%', 
           maxWidth: '100%',
-          height: '100vh', /* Full height */
+          height: '100vh', 
         }}
       ></iframe>
       <div className="logo-comp-wrapper" id="logo-wrapper">
