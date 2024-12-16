@@ -2,67 +2,58 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Spline from '@splinetool/react-spline';
 import Menu from '../Menuicon/Menu';
-import logo from '/logo.png'
+import logo from '/logo.png';
+
 const Home = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scaleFactor, setScaleFactor] = useState(1);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-
-  //     if (window.scrollY > 70) {
-  //       setIsScrolled(true);
-  //       console.log("scroll trigered");
-  //     } else {
-  //       setIsScrolled(false); 
-  //     }
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-
-  const [isFixed, setIsFixed] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsFixed(true);
+    // Handle scroll for translateY
+    const handleScroll = () => setScrollPosition(window.scrollY);
+
+    // Update scale based on viewport width
+    const updateScale = () => {
+      if (window.innerWidth >= 1400 && window.innerWidth <= 1700) {
+        setScaleFactor(2.5);
+      } else if (window.innerWidth >= 1024) {
+        setScaleFactor(2.3); // Adjust as needed
+      } else if (window.innerWidth >= 768) {
+        setScaleFactor(1.8);
       } else {
-        setIsFixed(false);
+        setScaleFactor(1.2); // Default for smaller screens
       }
     };
 
+    handleScroll();
+    updateScale(); // Initial check
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', updateScale);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', updateScale);
+    };
   }, []);
 
   return (
     <section className="home-section min-h-screen">
-      {/* <Menu/> */}
-      
-        <div id='spline-overlay'></div>
-         {/* <Spline
-          style={{
-            overflow: 'auto',
-          }}
-          id='spline-component'
-          scene="/energy_cube.spline"
-        />  */}
-          <iframe
-          // src="https://my.spline.design/reflectivespinner-ecfd7456ef402c5676a1ad39be3e3d20/"
-          src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
-          id='spline-component'
-          style={{overflow:'auto',marginTop:'1px'}}
-        ></iframe>  
-
-      <div className={`logo-comp-wrapper`} id='logo-wrapper'>
-        <img src={logo} />
-        {/* {isFixed && <div className='logo-fixed'><img src='/public/logo.png' alt="Logo" /></div>} */}
+      <div id="spline-overlay"></div>
+      <iframe
+        src="https://my.spline.design/energycube-856d259987bc8058b6eb5d42d67f784a/"
+        
+        style={{
+          transform: `scale(${scaleFactor}) translateY(${scrollPosition * 0.5}px)`,
+          transformOrigin: 'center',
+          transition: 'transform 0.1s ease-out',
+          width: '100%', /* Adjust width based on container */
+          maxWidth: '100%',
+          height: '100vh', /* Full height */
+        }}
+      ></iframe>
+      <div className="logo-comp-wrapper" id="logo-wrapper">
+        <img src={logo} alt="Logo" />
       </div>
- 
     </section>
   );
 };
