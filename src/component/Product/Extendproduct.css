@@ -4,6 +4,14 @@
   
 }  */
 
+.motion-div-cards{
+    
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* For iOS smooth scrolling */
+  height: 100vh; /* or desired height */
+  overflow-x: auto; /* Only allow horizontal scrolling */
+  display: flex;
+}
 
 
 .container {
