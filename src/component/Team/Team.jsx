@@ -47,7 +47,7 @@ const Team = () => {
 
         <div className='team-wrapper min-h-screen'>
 
-          <div className="mobile-view z-30 pl-5">
+          <div className="mobile-view z-30 pl-5 pt-8">
             <p className='text-headerLaseWhite text-3xl '>We are a team of </p>
             <p className='text-headerWhite text-3xl '><span>thinkers</span> & <span>makers</span>...</p>
           </div>
