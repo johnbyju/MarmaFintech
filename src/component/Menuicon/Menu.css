@@ -95,7 +95,7 @@
     border-radius: 20px;
     padding: 10px 15px;
   }
-  .custom-icon svg{
+  .custom-icon img{
     height: 25px;
     width: 25px;
  }
@@ -185,7 +185,7 @@
       width: 20px;
     }
 
-    .custom-icon svg{
+    .custom-icon img{
        height: 19px ;
        width: 24px ;
     }

@@ -50,10 +50,10 @@ export default function Menu() {
             </ul>
             <div className="social-icons">
               <a href="#" aria-label="Twitter" className='custom-icon'>
-              <img src='/icons/Vector.svg' alt="" />
+              <img src='/icons/x.png' alt="" />
               </a>
               <a href="#" aria-label="LinkedIn" className='custom-icon'>
-              <img src='/icons/Group.svg' alt="" />
+              <img src='/icons/linkedin.png' alt="" />
               </a>
               <a href="#" aria-label="Instagram" className='custom-icon'>
               <img src='/icons/insta.png' alt="" />
