@@ -16,7 +16,7 @@
 }
 
 .text-wrapper p {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .mission-wrapper {
@@ -160,7 +160,7 @@
 @media (max-width:480px) {
 
   .text-wrapper p {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .img-wrapper {
@@ -172,7 +172,7 @@
 @media (max-width:385px) {
 
   .text-wrapper p {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .img-wrapper {
@@ -180,3 +180,5 @@
     height: auto !important;
   }
 }
+
+@media (max-width:480px) {}

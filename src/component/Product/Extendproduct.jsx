@@ -55,7 +55,7 @@ const HorizontalScrollCarousel = () => {
           <div
             className="card flex items-center justify-center"
           >
-            <p className="inline-block font-normal text-2xl sm:text-4xl lg:text-[2.7rem] text-headerLaseWhite">
+            <p className="inline-block font-normal text-3xl sm:text-4xl lg:text-[2.7rem] text-headerLaseWhite">
               Our <span className="text-white">Products...</span>
             </p>
           </div>
@@ -85,7 +85,7 @@ const Card = ({ card }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 "
       ></div>
       <div className="absolute inset-0 z-10 product-card-data">
-        <h2 className="title-num font-ppnue">{card.id}</h2>
+        <h2 className="title-num font-light">{card.id}</h2>
         <p className="uppercase text-white product-title font-ppbook">
           {card.title}
         </p>
