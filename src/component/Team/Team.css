@@ -4,7 +4,7 @@
   padding            : 0;
   background-image   : url(/team.png);
   background-repeat  : no-repeat;
-  background-size    : 100% 100%;
+  background-size: 121% 117%;
   background-position: center;
   display            : flex;
   flex-direction     : column;
@@ -394,7 +394,7 @@
   }
 
   .team-wrapper{
-    background-size: 140% 80%;
+    background-size: 190% 78%;
   }
 }
 
@@ -424,7 +424,7 @@
     width: 22px !important;
   }
   .team-wrapper{
-    background-size: 160% 67%;
+    background-size: 183% 71%;
   }
 }
 
@@ -456,7 +456,7 @@
     width: 22px !important;
   }
   .team-wrapper{
-    background-size: 140% 65%;
+    background-size: 197% 60%;
   }
 }
 
