@@ -18,7 +18,6 @@ const Border = () => {
                 <Bgvedio/>
                 <ExtendMission/>
                 <Extendproduct/>
-                {/* <Example/> */}
                 <Team />
                 <Openings />
                 <Explore />
