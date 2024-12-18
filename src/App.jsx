@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Border from './component/Border/Border';
+import Root from './component/MarmaAdmin/components/Auth/Root';
 import disableDevtool from 'disable-devtool';
 
-
-// Added disable devtool for user can't able to open the devtool
 const App = () => {
   // useEffect(() => {
-    
   //   disableDevtool({
   //     debug: false, 
   //     ondevtoolopen: () => {}, 
@@ -15,9 +14,12 @@ const App = () => {
   // }, []);
 
   return (
-      <>
-        <Border />
-      </>
+    <>
+      <Routes>
+        <Route path="/" element={<Border />} />
+        <Route path="/admin/*" element={<Root />} />
+      </Routes>
+    </>
   );
 };
 
