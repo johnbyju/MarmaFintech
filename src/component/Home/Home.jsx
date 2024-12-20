@@ -14,10 +14,10 @@ const Home = () => {
 
     // Update scale based on viewport width
     const updateScale = () => {
-      if (window.innerWidth >= 1400 && window.innerWidth <= 1700) {
-        setScaleFactor(2.5);
+      if (window.innerWidth >= 1400 && window.innerWidth <= 2200) {
+        setScaleFactor(2.6);
       } else if (window.innerWidth >= 1024) {
-        setScaleFactor(2.6); // Adjust as needed
+        setScaleFactor(2.3); // Adjust as needed
       } else if (window.innerWidth >= 768) {
         setScaleFactor(2);
       } else {
