@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './Openings.css';
 import { X } from 'lucide-react';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 export default function JobApplicationForm(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [dragActive, setDragActive] = useState(false);
-  
+
 
   const handleDrag = (e) => {
     e.preventDefault();
@@ -55,8 +56,8 @@ export default function JobApplicationForm(props) {
     expectedsalary: '',
     Portfoliolink: '',
     resume: '',
-    department:props?.jobCategory
-    });
+    department: props?.jobCategory
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -90,49 +91,44 @@ export default function JobApplicationForm(props) {
     data.append('currentsalary', formData.currentsalary);
     data.append('expectedsalary', formData.expectedsalary);
     data.append('department', formData?.department);
-    if (formData.Portfoliolink){
+    if (formData.Portfoliolink) {
       data.append('Portfoliolink', formData.Portfoliolink);
     }
     data.append('resume', formData.resume);
 
     try {
-      const response = await fetch('http://ec2-18-214-60-96.compute-1.amazonaws.com:7001/apply', {
-        method: 'POST',
-        body: data,
-      });
-    
-      if (!response.ok) {
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}apply`, data);
+
+      if (response.status === 200 || response.status === 201) {
+        // Success alert
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Application submitted successfully!',
+          background: '#000', // Black background
+          color: '#fff',       // White text
+        });
+
+        // Clear the form
+        setFormData({
+          name: '',
+          applyingDesignation: props?.Job,
+          email: '',
+          experience: '',
+          noticeperiod: '',
+          currentsalary: '',
+          expectedsalary: '',
+          Portfoliolink: '',
+          resume: '',
+          department: "",
+        });
+        props?.onClose();
+      } else {
         throw new Error('Failed to submit application');
       }
-    
-      const result = await response.json();
-      console.log('Response from server:', result);
-    
-      // Success alert
-      Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: 'Application submitted successfully!',
-        background: '#000', // Black background
-        color: '#fff',       // White text
-      });
-    
-      setFormData({
-        name: '',
-        applyingDesignation: props?.Job,
-        email: '',
-        experience: '',
-        noticeperiod: '',
-        currentsalary: '',
-        expectedsalary: '',
-        Portfoliolink: '',
-        resume: '',
-        department: "",
-      });
-      props?.onClose();
     } catch (error) {
       console.error('Error submitting application:', error);
-    
+
       // Error alert
       Swal.fire({
         icon: 'error',
@@ -150,6 +146,7 @@ export default function JobApplicationForm(props) {
     props?.onClose();
   };
 
+
   return (
     <div className="">
       <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-6">
@@ -158,7 +155,7 @@ export default function JobApplicationForm(props) {
             onClick={handleClose}
             className="absolute right-4 top-4 text-white hover:text-white"
           >
-            <X/>
+            <X />
           </button>
           <h2 className="text-2xl md:text-3xl font-bold mb-6">Apply for Jobs</h2>
           <form onSubmit={handleSubmit} className="space-y-6">

@@ -14,6 +14,8 @@ function EventModal({ isOpen, onClose, setEvents }) {
     date: dayjs(), // Initialize with current date
   });
 
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -26,6 +28,7 @@ function EventModal({ isOpen, onClose, setEvents }) {
   const handleEventChange = async (e) => {
     e.preventDefault();
   
+    setIsLoading(true); // Set loading state to true when submitting
     try {
       const response = await PostEventApi({
         link: formData.link,
@@ -45,16 +48,17 @@ function EventModal({ isOpen, onClose, setEvents }) {
         setEvents(afterUpdatedEvent);
       }
     } catch (error) {
-      console.error('Error while posting event:', error);
+      console.error('Error while posting event:',error);
       Swal.fire({
         title: 'Error!',
-        text: 'Failed to add the event. Please try again.',
+        text: error,
         icon: 'error',
         confirmButtonText: 'OK',
       });
+    } finally {
+      setIsLoading(false); // Reset loading state after the request completes
     }
   };
-  
   
   return (
     <>
@@ -102,7 +106,7 @@ function EventModal({ isOpen, onClose, setEvents }) {
             </div>
 
             <button type="submit" className="w-full px-4 py-2 bg-black text-white rounded">
-              Post
+              {isLoading ? 'Posting...' : 'Post'} {/* Conditional text based on loading state */}
             </button>
           </form>
         </div>

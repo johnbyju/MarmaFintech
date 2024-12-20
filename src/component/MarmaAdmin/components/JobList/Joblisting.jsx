@@ -295,7 +295,7 @@ export default function Dashboard() {
         <div>
           <img src="/logob.png" alt="Logo" style={{ width: '130px' }} />
         </div>
-        <div className="relative flex items-center" onClick={() => setIsTabOpen((prev) => !prev)}>
+        <div className="relative flex items-center cursor-pointer" onClick={() => setIsTabOpen((prev) => !prev)}>
           <div className="flex flex-col items-center gap-2 text-sm">
             <span></span>
             <span className="text-gray-500">OPTIONS</span>
