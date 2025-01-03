@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Border from './component/Border/Border';
 import Root from './component/MarmaAdmin/components/Auth/Root';
+import ExtendMission from './component/Mission/ExtendMission';
 
 const App = () => {
   const location = useLocation();
@@ -21,7 +22,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Border />} />
-        <Route path="/admin/*" element={<Root />} />
+        <Route path="/mission" element={<ExtendMission/>} />
+        <Route path="/admin" element={<Root />} />
       </Routes>
     </>
   );
