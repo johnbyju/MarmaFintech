@@ -160,7 +160,7 @@ export default function ExploreLatest() {
             LATEST
           </h2>
           <p className="text-base md:text-md lg:text-lg mt-40 sm:mt-0 text-sub-head-color custom-padding">
-            MARMA FINTECH develops a dynamic workspace with events like workshops, team-building activities,
+            Marma fintech develops a dynamic workspace with events like workshops, team-building activities,
             and celebration gatherings that inspire collaboration, growth, and connection.
           </p>
         </div>

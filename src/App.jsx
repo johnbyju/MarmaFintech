@@ -6,27 +6,32 @@ import ExtendMission from './component/Mission/ExtendMission';
 
 const App = () => {
   const location = useLocation();
+  const isMobile = window.innerWidth <= 900; // Adjust width threshold as needed
 
-  useEffect(() => {
-    const isMobile = window.innerWidth <= 900; // Adjust the width as needed (e.g., 480 for smaller screens)
-
-    if (isMobile && location.pathname.startsWith('/admin')) {
-      // Redirect to a PC/laptop recommendation page or show a message
-      document.body.innerHTML = `<div style="display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
-                                    <h1>Please use a PC or laptop to view this site.</h1>
-                                  </div>`;
-    }
-  }, [location.pathname]);
+  if (isMobile && location.pathname.startsWith('/admin')) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          textAlign: 'center',
+        }}
+      >
+        <h1>Please use a PC or laptop to view this site.</h1>
+      </div>
+    );
+  }
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Border />} />
-        <Route path="/mission" element={<ExtendMission/>} />
-        <Route path="/admin" element={<Root />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Border />} />
+      <Route path="/mission" element={<ExtendMission />} />
+      <Route path="/admin" element={<Root />} />
+    </Routes>
   );
 };
 
 export default App;
+
