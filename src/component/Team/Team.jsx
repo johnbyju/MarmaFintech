@@ -6,7 +6,7 @@ const Team = () => {
   const teamList = [
     {
       id: 1,
-      name: "Ananda prabhu rajendaran",
+      name: "Anand Prabhu Rajendran",
       position: "Managing Director",
       image: '/images/profile/profile1.png',
       linkedin: 'https://in.linkedin.com/',
